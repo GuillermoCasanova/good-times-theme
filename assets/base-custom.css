@@ -1,0 +1,79 @@
+body,
+html {
+    color: red !important;
+}
+
+body {
+    background-color: rgb(249, 247, 241) !important;
+    background-image:
+        radial-gradient(at 72% 63%, rgb(251, 245, 231) 0px, transparent 50%),
+        radial-gradient(at 97% 13%, rgb(234, 219, 193) 0px, transparent 50%),
+        radial-gradient(at 31% 72%, hsla(43, 100%, 93%, 1) 0px, transparent 50%),
+        radial-gradient(at 1% 78%, hsla(42, 53%, 83%, 1) 0px, transparent 50%),
+        radial-gradient(at 61% 9%, hsla(45, 38%, 87%, 1) 0px, transparent 50%),
+        radial-gradient(at 49% 54%, hsla(41, 100%, 87%, 1) 0px, transparent 50%),
+        radial-gradient(at 93% 90%, hsla(43, 50%, 81%, 1) 0px, transparent 50%),
+        radial-gradient(at 2% 17%, hsla(44, 100%, 93%, 1) 0px, transparent 50%) !important;
+}
+
+.site-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.isolate,
+.rich-text {
+    background-color: transparent !important;
+}
+
+.texture {
+    position: absolute;
+    pointer-events: none;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.website-texture {
+    z-index: 100;
+    mix-blend-mode: multiply;
+    width: 100%;
+    position: relative;
+    mix-blend-mode: multiply;
+}
+
+.paper-texture-pattern-folds {
+    mix-blend-mode: lighten;
+    background-repeat: repeat-y;
+    object-fit: cover;
+    z-index: 104;
+    opacity: .35;
+    background-position: center;
+    position: absolute;
+}
+
+
+.paper-texture-pattern-0 {
+    z-index: 100;
+    opacity: .8;
+    mix-blend-mode: multiply;
+    background-repeat: repeat-y;
+    background-size: contain;
+}
+
+.paper-texture-pattern-1 {
+    mix-blend-mode: screen;
+    z-index: 98;
+    opacity: .3;
+    background-repeat: repeat;
+}
+
+.paper-texture-pattern-2 {
+    mix-blend-mode: overlay;
+    z-index: 97;
+    opacity: .4;
+    background-repeat: repeat;
+}
