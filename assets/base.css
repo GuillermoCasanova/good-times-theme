@@ -2220,8 +2220,8 @@ input[type='checkbox'] {
 /* Main Header Layout */
 .header-wrapper {
   display: block;
-  position: relative;
-  background-color: rgb(var(--color-background));
+  position: fixed;
+  background-color: transparent;
 }
 
 .header-wrapper--border-bottom {
@@ -2599,7 +2599,7 @@ details[open]>.header__submenu {
 .header__menu-item {
   padding: 1.2rem;
   text-decoration: none;
-  color: rgba(var(--color-foreground), 0.75);
+  color: #fff;
 }
 
 .header__menu-item:hover {
