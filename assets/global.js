@@ -316,9 +316,10 @@ class MenuDrawer extends HTMLElement {
     const parentMenuElement = detailsElement.closest('.has-submenu');
     const isOpen = detailsElement.hasAttribute('open');
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    
 
     function addTrapFocus() {
-      trapFocus(summaryElement.nextElementSibling, detailsElement.querySelector('button'));
+      trapFocus(summaryElement.nextElementSibling);
       summaryElement.nextElementSibling.removeEventListener('transitionend', addTrapFocus);
     }
 
@@ -326,9 +327,24 @@ class MenuDrawer extends HTMLElement {
       if(isOpen) event.preventDefault();
       isOpen ? this.closeMenuDrawer(event, summaryElement) : this.openMenuDrawer(summaryElement);
     } else {
+
+
+
+      if(detailsElement.hasAttribute('open') && detailsElement !== this.mainDetailsToggle) {
+       event.preventDefault();
+        const detailsElement = event.currentTarget.closest('details');
+        this.closeSubmenu(detailsElement);
+        return
+      }
+
       setTimeout(() => {
+        const subMenuWrapper = detailsElement.querySelector('[data-submenu-wrapper]');
+        const height =  detailsElement.querySelector('[data-submenu-wrapper]').querySelector('[data-submenu-content]').getBoundingClientRect().height;
+        subMenuWrapper.style.height = `${height}px`;
+
         detailsElement.classList.add('menu-opening');
         summaryElement.setAttribute('aria-expanded', true);
+
         parentMenuElement && parentMenuElement.classList.add('submenu-open');
         !reducedMotion || reducedMotion.matches ? addTrapFocus() : summaryElement.nextElementSibling.addEventListener('transitionend', addTrapFocus);
       }, 100);
@@ -372,16 +388,22 @@ class MenuDrawer extends HTMLElement {
   }
 
   closeSubmenu(detailsElement) {
+
     const parentMenuElement = detailsElement.closest('.submenu-open');
     parentMenuElement && parentMenuElement.classList.remove('submenu-open');
     detailsElement.classList.remove('menu-opening');
     detailsElement.querySelector('summary').setAttribute('aria-expanded', false);
     removeTrapFocus(detailsElement.querySelector('summary'));
     this.closeAnimation(detailsElement);
+        
+    const subMenuWrapper = detailsElement.querySelector('[data-submenu-wrapper]');
+    subMenuWrapper.style.height = 0; 
+
   }
 
   closeAnimation(detailsElement) {
     let animationStart;
+
 
     const handleAnimation = (time) => {
       if (animationStart === undefined) {

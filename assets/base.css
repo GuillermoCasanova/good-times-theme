@@ -2383,17 +2383,6 @@ input[type='checkbox'] {
   }
 }
 
-.header__icon--menu[aria-expanded="true"]::before {
-  content: "";
-  top: 100%;
-  left: 0;
-  height: calc(var(--viewport-height, 100vh) - (var(--header-bottom-position, 100%)));
-  width: 100%;
-  display: block;
-  position: absolute;
-  background: rgba(var(--color-foreground), 0.5);
-}
-
 /* Search */
 menu-drawer+.header__search {
   display: none;
@@ -2526,6 +2515,7 @@ details[open] .modal-overlay::after {
   transform: scale(1);
   transition: transform 150ms ease, opacity 150ms ease;
   color: #fff;
+  z-index: 2;
 }
 
 details:not([open])>.header__icon--menu .icon-close,
@@ -2533,6 +2523,10 @@ details[open]>.header__icon--menu .icon-hamburger {
   visibility: hidden;
   opacity: 0;
   transform: scale(0.8);
+}
+
+details[open]>.header__icon--menu .icon-close {
+  color: black;
 }
 
 .js details[open]:not(.menu-opening)>.header__icon--menu .icon-close {
