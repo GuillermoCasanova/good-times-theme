@@ -702,7 +702,7 @@ details>* {
 :root {
   --duration-short: 100ms;
   --duration-default: 200ms;
-  --duration-long: 500ms;
+  --duration-long: 400ms;
 }
 
 .underlined-link,
@@ -2371,6 +2371,10 @@ input[type='checkbox'] {
   padding: 0;
 }
 
+.menu-open .header__icon--cart {
+  color: black;
+}
+
 .header__icon--cart {
   position: relative;
   margin-right: -1.2rem;
@@ -2391,6 +2395,10 @@ menu-drawer+.header__search {
 .header>.header__search {
   grid-area: left-icon;
   justify-self: start;
+}
+
+.menu-open .header__icon--search {
+  color: black;
 }
 
 .header:not(.header--has-menu) *>.header__search {
@@ -2538,6 +2546,7 @@ details[open]>.header__icon--menu .icon-close {
   opacity: 1;
   transform: scale(1.07);
 }
+
 
 .js details>.header__submenu {
   opacity: 0;
