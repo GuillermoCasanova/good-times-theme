@@ -441,10 +441,6 @@ class HeaderWrapper extends HTMLElement {
       elem.addEventListener('mouseover', this.showHoverBackground.bind(this));   
     });
 
-    // this.querySelectorAll('[data-hover-link]').forEach((elem)=> {
-    //   elem.addEventListener('click', this.hideHoverBackground.bind(this));   
-    // });
-
     this.querySelectorAll('[data-click-link]').forEach((elem)=> {
       elem.addEventListener('click', (event) => { this.showHoverBackground(event, true)});   
     });
@@ -468,7 +464,6 @@ class HeaderWrapper extends HTMLElement {
     this.querySelectorAll('details').forEach(details => {
       details.removeAttribute('open');
       details.classList.remove('menu-opening');
-      details.querySelector('summary').setAttribute('aria-expanded', false);
     });
 
   }
@@ -484,7 +479,6 @@ class HeaderWrapper extends HTMLElement {
 
     if(isDropdown) {
       console.log(event.currentTarget); 
-      console.log(event.currentTarget.getAttribute('aria-expanded'));
 
       // if(event.currentTarget.getAttribute('aria-expanded') === 'false') {
       //   this.headerBackground.style.height = height + 'px'; 
@@ -498,7 +492,7 @@ class HeaderWrapper extends HTMLElement {
 
     }  else {
 
-      if(this.querySelectorAll('[data-click-link][aria-expanded="true"]').length > 0) {
+      if(this.querySelector('[data-click-link]').closest('[open]') !== null) {
         return 
       }
 
