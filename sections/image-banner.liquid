@@ -11,7 +11,8 @@
   .image-banner__inner {
     position: relative;
     padding-bottom: 120%; 
-    overflow: hidden
+    overflow: hidden;
+    z-index: 0; 
   }
 
   @media only screen and (min-width: 600px) {
@@ -23,13 +24,12 @@
 
   @media only screen and (min-width: 930px) {
     .image-banner__inner {
-      padding-bottom: 60%; 
+      padding-bottom: 95vh; 
     }
   }
 
   @media only screen and (min-width: 1600px) {
     .image-banner__inner {
-      min-height: 60rem; 
     }
   }
 
@@ -42,15 +42,17 @@
   
   .character {
     position: absolute;
-    bottom: -6rem; 
+    bottom: -6rem;
+    top: auto;  
     right: 5rem; 
-    z-index: 1; 
+    z-index: 3; 
     width: 20vw;
     max-width: 13rem;
   }
 
   .character img {
     width: 100%; 
+    position: relative; 
   }
 
 {% endstyle %}

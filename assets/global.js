@@ -364,6 +364,7 @@ class MenuDrawer extends HTMLElement {
     if (event === undefined) return;
 
     this.mainDetailsToggle.classList.remove('menu-opening');
+
     this.mainDetailsToggle.querySelectorAll('details').forEach(details => {
       details.removeAttribute('open');
       details.classList.remove('menu-opening');
@@ -427,6 +428,88 @@ class MenuDrawer extends HTMLElement {
 }
 
 customElements.define('menu-drawer', MenuDrawer);
+
+class HeaderWrapper extends HTMLElement {
+  constructor() {
+    super();
+    console.log('hello');
+    this.header = this.querySelector('header'); 
+    this.headerBackground = this.querySelector('[data-header-background]'); 
+    this.dropDownOpen = false; 
+
+    this.querySelectorAll('[data-hover-link]').forEach((elem)=> {
+      elem.addEventListener('mouseover', this.showHoverBackground.bind(this));   
+    });
+
+    // this.querySelectorAll('[data-hover-link]').forEach((elem)=> {
+    //   elem.addEventListener('click', this.hideHoverBackground.bind(this));   
+    // });
+
+    this.querySelectorAll('[data-click-link]').forEach((elem)=> {
+      elem.addEventListener('click', (event) => { this.showHoverBackground(event, true)});   
+    });
+
+    this.addEventListener('mouseleave', (event) => {
+      this.hideHoverBackground();
+    }); 
+
+
+  }
+
+  connectedCallback() {
+    
+  }
+
+
+  hideHoverBackground() {
+    this.header.classList.remove('is-hovered'); 
+    this.headerBackground.style.height = 0; 
+
+    this.querySelectorAll('details').forEach(details => {
+      details.removeAttribute('open');
+      details.classList.remove('menu-opening');
+      details.querySelector('summary').setAttribute('aria-expanded', false);
+    });
+
+  }
+  
+  showHoverBackground(event, isDropdown = false) {
+    let height = this.header.clientHeight + 20; 
+    this.header.classList.add('is-hovered'); 
+
+    console.log('show hover bg');
+    console.log(event.currentTarget);
+
+
+
+    if(isDropdown) {
+      console.log(event.currentTarget); 
+      console.log(event.currentTarget.getAttribute('aria-expanded'));
+
+      // if(event.currentTarget.getAttribute('aria-expanded') === 'false') {
+      //   this.headerBackground.style.height = height + 'px'; 
+      //   return
+      // }
+
+      let additionalHeight = event.currentTarget.nextElementSibling.clientHeight; 
+      height = additionalHeight + height; 
+      this.style.height = height + 'px'; 
+      this.headerBackground.style.height = this.clientHeight +'px';
+
+    }  else {
+
+      if(this.querySelectorAll('[data-click-link][aria-expanded="true"]').length > 0) {
+        return 
+      }
+
+      this.style.height = height + 'px'; 
+      this.headerBackground.style.height = this.clientHeight  +'px';
+    }
+  }
+
+}
+
+customElements.define('header-wrapper', HeaderWrapper);
 
 class HeaderDrawer extends MenuDrawer {
   constructor() {
