@@ -144,13 +144,7 @@
         "1655928536e57487d0-6": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true
-          }
-        },
-        "1655928536e57487d0-7": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
+            "show_dynamic_checkout": false
           }
         }
       },
@@ -160,8 +154,7 @@
         "1655928536e57487d0-2",
         "1655928536e57487d0-3",
         "1655928536e57487d0-4",
-        "1655928536e57487d0-6",
-        "1655928536e57487d0-7"
+        "1655928536e57487d0-6"
       ],
       "settings": {
         "product": "easter-sunday-hay-lila-corduroy",
