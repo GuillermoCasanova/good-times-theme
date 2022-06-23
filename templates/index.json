@@ -11,11 +11,10 @@
     "16559285361788393d": {
       "type": "featured-product",
       "blocks": {
-        "1655928536e57487d0-0": {
-          "type": "text",
+        "c82d6971-1fa3-442c-8396-f9476c770f90": {
+          "type": "vendor",
           "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
+            "name": "{{ section.settings.product.vendor }}"
           }
         },
         "1655928536e57487d0-1": {
@@ -27,8 +26,7 @@
         "1655928536e57487d0-2": {
           "type": "text",
           "settings": {
-            "text": "{{ section.settings.product.metafields.descriptors.subtitle.value }}",
-            "text_style": "subtitle"
+            "text": "{{ section.settings.product.metafields.descriptors.subtitle.value }}"
           }
         },
         "139f3a77-e337-4028-a266-aa2eae3ba160": {
@@ -50,7 +48,7 @@
         }
       },
       "block_order": [
-        "1655928536e57487d0-0",
+        "c82d6971-1fa3-442c-8396-f9476c770f90",
         "1655928536e57487d0-1",
         "1655928536e57487d0-2",
         "139f3a77-e337-4028-a266-aa2eae3ba160",
