@@ -1,5 +1,6 @@
 /* Color custom properties */
 
+
 :root,
 .color-background-1 {
   --color-foreground: var(--color-base-text);
@@ -214,7 +215,7 @@ html.no-js .no-js-hidden {
 .page-width {
   max-width: var(--page-width);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
 }
 
 .page-width-desktop {
@@ -283,7 +284,7 @@ body,
 .color-inverse,
 .color-accent-1,
 .color-accent-2 {
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground));
   background-color: rgb(var(--color-background));
 }
 

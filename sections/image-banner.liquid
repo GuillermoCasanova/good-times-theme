@@ -24,7 +24,7 @@
 
   @media only screen and (min-width: 930px) {
     .image-banner__inner {
-      padding-bottom: 95vh; 
+      padding-bottom: 98vh; 
     }
   }
 
@@ -57,9 +57,10 @@
 
 {% endstyle %}
 
+{% comment %} 
 <div class="character">
   <img src="{{ section.settings.character | image_url: width: 750 }}" width="{{ section.settings.character.width }}" alt="Hello from Good Times!" loading="lazy">
-</div>
+</div> {% endcomment %}
 
 <div class="image-banner__inner">
   <picture>
