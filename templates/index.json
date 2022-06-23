@@ -11,16 +11,16 @@
     "16559285361788393d": {
       "type": "featured-product",
       "blocks": {
-        "c82d6971-1fa3-442c-8396-f9476c770f90": {
-          "type": "vendor",
-          "settings": {
-            "name": "{{ section.settings.product.vendor }}"
-          }
-        },
         "1655928536e57487d0-1": {
           "type": "title",
           "settings": {
             "heading_size": "h1"
+          }
+        },
+        "c82d6971-1fa3-442c-8396-f9476c770f90": {
+          "type": "vendor",
+          "settings": {
+            "name": "{{ section.settings.product.vendor }}"
           }
         },
         "1655928536e57487d0-2": {
@@ -48,8 +48,8 @@
         }
       },
       "block_order": [
-        "c82d6971-1fa3-442c-8396-f9476c770f90",
         "1655928536e57487d0-1",
+        "c82d6971-1fa3-442c-8396-f9476c770f90",
         "1655928536e57487d0-2",
         "139f3a77-e337-4028-a266-aa2eae3ba160",
         "1655928536e57487d0-4",
