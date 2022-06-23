@@ -15,7 +15,7 @@
     z-index: 0; 
   }
 
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 700px) {
     .image-banner__inner {
       padding-bottom: 80%; 
     }
@@ -64,7 +64,7 @@
 
 <div class="image-banner__inner">
   <picture>
-      <source media="(min-width: 600px)" srcset="{%- if section.settings.desktop_image.width >= 375 -%}{{ section.settings.desktop_image | image_url: width: 375 }} 375w,{%- endif -%}
+      <source media="(min-width: 700px)" srcset="{%- if section.settings.desktop_image.width >= 375 -%}{{ section.settings.desktop_image | image_url: width: 375 }} 375w,{%- endif -%}
       {%- if section.settings.desktop_image.width >= 750 -%}{{ section.settings.desktop_image | image_url: width: 750 }} 750w,{%- endif -%}
       {%- if section.settings.desktop_image.width >= 1100 -%}{{ section.settings.desktop_image | image_url: width: 1100 }} 1100w,{%- endif -%}
       {%- if section.settings.desktop_image.width >= 1500 -%}{{ section.settings.desktop_image | image_url: width: 1500 }} 1500w,{%- endif -%}

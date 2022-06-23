@@ -11,6 +11,7 @@
   text-shadow: var(--headline-shadow);
   color: var(--primary-color);
   margin-top: 0;
+  max-width: 34rem;
 }
 
 .featured-product .product__media-list {
@@ -56,7 +57,7 @@
   display: table;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
   .featured-product .product__media-item {
     padding-bottom: 0;
   }
@@ -67,13 +68,6 @@
 }
 
 @media screen and (min-width: 990px) {
-  .background-secondary .featured-product:not(.product--no-media)>.product__info-wrapper {
-    padding: 0 0 0 5rem;
-  }
-
-  .featured-product:not(.product--no-media)>.product__info-wrapper {
-    padding: 0 7rem;
-  }
 
   .background-secondary .featured-product {
     padding: 6rem 7rem;
@@ -81,11 +75,6 @@
     z-index: 1;
   }
 }
-
-.featured-product .product__info-wrapper {
-  position: relative;
-}
-
 
 .featured-product__new-starburst {
   position: absolute;
@@ -110,6 +99,15 @@
   font-weight: var(--font-body-weight-bold);
 }
 
+@media screen and (min-width: 700px) {
+  .featured-product__featured-line {
+    transform: rotate(90deg);
+    right: -4.25rem;
+    left: auto;
+    top: -8rem;
+  }
+}
+
 .featured-product__featured-line:after {
   content: " ";
   position: absolute;
@@ -128,11 +126,22 @@
   width: 97vw;
 }
 
+@media screen and (min-width: 700px) {
+  .featured-product__images-wrapper {
+    position: relative;
+    left: -7vw;
+    width: 57vw;
+    top: 6rem;
+    max-width: 71rem;
+  }
+}
+
 .featured-product__image {
   padding-bottom: 100%;
   width: 100%;
   position: relative;
   overflow: hidden;
+  display: block;
 }
 
 .featured-product__image img {
@@ -159,8 +168,8 @@
 }
 
 .featured-product .product__description {
-  max-width: 26rem;
-  font-size: 1.25rem;
+  max-width: 25rem;
+  font-size: 1.3rem;
   line-height: 1.45;
   margin-right: 0;
   margin-left: auto;
@@ -168,15 +177,36 @@
 
 .featured-product .product__info-wrapper {
   max-width: 36rem;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+}
+
+@media screen and (min-width: 700px) {
+  .featured-product .product__info-wrapper {
+    padding-left: 2rem;
+    margin-top: 12rem;
+  }
 }
 
 .product-form__price-buttons {
   display: flex;
   align-items: center;
+  max-width: 25rem;
+  margin-right: 0;
+  margin-left: auto;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid black;
+}
+
+.featured-product .product-form__price-buttons button {
+  margin-bottom: 0;
 }
 
 .featured-product .price__regular {
   font-family: var(--font-heading-family);
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-style: italic;
+  margin-right: 2rem;
+  letter-spacing: 0;
 }

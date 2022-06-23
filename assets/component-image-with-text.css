@@ -6,7 +6,7 @@
   position: relative;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
   .image-with-text__grid--reverse {
     flex-direction: row-reverse;
   }
@@ -25,7 +25,7 @@
   height: 43.5rem;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
   .image-with-text__media--small {
     height: 31.4rem;
   }
@@ -52,13 +52,13 @@
   height: 20rem;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
   .image-with-text__media--placeholder.image-with-text__media--adapt {
     height: 30rem;
   }
 }
 
-.image-with-text__media--placeholder > svg {
+.image-with-text__media--placeholder>svg {
   position: absolute;
   left: 50%;
   max-width: 80rem;
@@ -92,48 +92,37 @@
 
 .image-with-text:not(.image-with-text--overlap) .image-with-text__media-item:after {
   border-radius: var(--media-radius);
-  box-shadow: var(--media-shadow-horizontal-offset)
-    var(--media-shadow-vertical-offset)
-    var(--media-shadow-blur-radius)
-    rgba(var(--color-shadow), var(--media-shadow-opacity));
+  box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-shadow), var(--media-shadow-opacity));
 }
 
 .image-with-text:not(.image-with-text--overlap) .image-with-text__text-item:after {
   border-radius: var(--text-boxes-radius);
-  box-shadow: var(--text-boxes-shadow-horizontal-offset)
-    var(--text-boxes-shadow-vertical-offset)
-    var(--text-boxes-shadow-blur-radius)
-    rgba(var(--color-shadow), var(--text-boxes-shadow-opacity));
+  box-shadow: var(--text-boxes-shadow-horizontal-offset) var(--text-boxes-shadow-vertical-offset) var(--text-boxes-shadow-blur-radius) rgba(var(--color-shadow), var(--text-boxes-shadow-opacity));
 }
 
-.image-with-text .image-with-text__media-item > * {
+.image-with-text .image-with-text__media-item>* {
   border-radius: var(--media-radius);
   overflow: hidden;
-  box-shadow: var(--media-shadow-horizontal-offset)
-    var(--media-shadow-vertical-offset)
-    var(--media-shadow-blur-radius)
-    rgba(var(--color-shadow), var(--media-shadow-opacity));
+  box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-shadow), var(--media-shadow-opacity));
 }
 
 .image-with-text .global-media-settings {
   overflow: hidden !important;
 }
 
-.image-with-text .image-with-text__text-item > * {
+.image-with-text .image-with-text__text-item>* {
   border-radius: var(--text-boxes-radius);
   overflow: hidden;
-  box-shadow: var(--text-boxes-shadow-horizontal-offset)
-    var(--text-boxes-shadow-vertical-offset)
-    var(--text-boxes-shadow-blur-radius)
-    rgba(var(--color-shadow), var(--text-boxes-shadow-opacity));
+  box-shadow: var(--text-boxes-shadow-horizontal-offset) var(--text-boxes-shadow-vertical-offset) var(--text-boxes-shadow-blur-radius) rgba(var(--color-shadow), var(--text-boxes-shadow-opacity));
 }
 
-.image-with-text:not(.image-with-text--overlap) .image-with-text__media-item > *,
-.image-with-text:not(.image-with-text--overlap) .image-with-text__text-item > * {
+.image-with-text:not(.image-with-text--overlap) .image-with-text__media-item>*,
+.image-with-text:not(.image-with-text--overlap) .image-with-text__text-item>* {
   box-shadow: none;
 }
 
 @media screen and (max-width: 749px) {
+
   .image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__media-item:after,
   .image-with-text.collapse-corners:not(.image-with-text--overlap) .grid__item .image-with-text__media,
   .image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__media img {
@@ -152,12 +141,12 @@
   }
 }
 
-.image-with-text__content--mobile-right > * {
+.image-with-text__content--mobile-right>* {
   align-self: flex-end;
   text-align: right;
 }
 
-.image-with-text__content--mobile-center > * {
+.image-with-text__content--mobile-center>* {
   align-self: center;
   text-align: center;
 }
@@ -167,7 +156,7 @@
   margin: -3rem auto 0;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
   .image-with-text__grid--reverse .image-with-text__content {
     margin-left: auto;
   }
@@ -182,17 +171,17 @@
     align-self: flex-start;
   }
 
-  .image-with-text__content--desktop-right > * {
+  .image-with-text__content--desktop-right>* {
     align-self: flex-end;
     text-align: right;
   }
 
-  .image-with-text__content--desktop-left > * {
+  .image-with-text__content--desktop-left>* {
     align-self: flex-start;
     text-align: left;
   }
 
-  .image-with-text__content--desktop-center > * {
+  .image-with-text__content--desktop-center>* {
     align-self: center;
     text-align: center;
   }
@@ -232,7 +221,7 @@
   }
 
   .image-with-text__media-item--small,
-  .image-with-text__media-item--large + .image-with-text__text-item {
+  .image-with-text__media-item--large+.image-with-text__text-item {
     flex-grow: 0;
   }
 
@@ -271,10 +260,7 @@
 
 .image-with-text__content {
   border-radius: var(--text-boxes-radius);
-  box-shadow: var(--text-boxes-shadow-horizontal-offset)
-    var(--text-boxes-shadow-vertical-offset)
-    var(--text-boxes-shadow-blur-radius)
-    rgba(var(--color-shadow), var(--text-boxes-shadow-opacity));
+  box-shadow: var(--text-boxes-shadow-horizontal-offset) var(--text-boxes-shadow-vertical-offset) var(--text-boxes-shadow-blur-radius) rgba(var(--color-shadow), var(--text-boxes-shadow-opacity));
 }
 
 @media screen and (min-width: 990px) {
@@ -283,16 +269,16 @@
   }
 }
 
-.image-with-text__content > * + * {
+.image-with-text__content>*+* {
   margin-top: 2rem;
 }
 
-.image-with-text__content > .image-with-text__text:empty ~ a {
+.image-with-text__content>.image-with-text__text:empty~a {
   margin-top: 2rem;
 }
 
-.image-with-text__content > :first-child:is(.image-with-text__heading),
-.image-with-text__text--caption + .image-with-text__heading,
+.image-with-text__content> :first-child:is(.image-with-text__heading),
+.image-with-text__text--caption+.image-with-text__heading,
 .image-with-text__text--caption:first-child {
   margin-top: 0;
 }
@@ -302,11 +288,11 @@
   margin-bottom: 0;
 }
 
-.image-with-text__content .button + .image-with-text__text {
+.image-with-text__content .button+.image-with-text__text {
   margin-top: 2rem;
 }
 
-.image-with-text__content .image-with-text__text + .button {
+.image-with-text__content .image-with-text__text+.button {
   margin-top: 3rem;
 }
 

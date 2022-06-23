@@ -77,3 +77,37 @@ body {
     opacity: .4;
     background-repeat: repeat;
 }
+
+
+/*X-LARGE-UP*/
+:root {
+    font-size: .8rem;
+}
+
+@media screen and (min-width: 990px) {
+    :root {
+        font-size: .9rem;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    :root {
+        font-size: 1rem;
+    }
+}
+
+
+/*X-LARGE-UP*/
+@media screen and (min-width: 1681px) {
+    :root {
+        font-size: .8rem;
+    }
+}
+
+
+/*WIDESCREEN-UP*/
+@media screen and (min-width: 2000px) {
+    :root {
+        font-size: 1rem;
+    }
+}
