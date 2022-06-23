@@ -58,10 +58,22 @@
       "settings": {
         "product": "easter-sunday-hay-lila-corduroy"
       }
+    },
+    "1655981633dc84401b": {
+      "type": "featured-products",
+      "settings": {
+        "product_list": [
+          "the-supremes-tee",
+          "yeezy-x-gap-blue-hoodie"
+        ],
+        "collection": "merch",
+        "cta_label": "Shop Good Times"
+      }
     }
   },
   "order": [
     "image_banner",
-    "16559285361788393d"
+    "16559285361788393d",
+    "1655981633dc84401b"
   ]
 }
