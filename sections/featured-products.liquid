@@ -1,0 +1,57 @@
+<ul id="Slider-{{ section.id }}" class="grid product-grid contains-card">
+
+    {%- for product in section.settings.product_list -%}
+      <li  class="grid__item">
+        {% render 'card-product',
+          card_product: product,
+          media_aspect_ratio: section.settings.image_ratio,
+          show_secondary_image: true
+          show_vendor: section.settings.show_vendor,
+          show_rating: false
+          show_quick_add: false,
+          section_id: section.id
+        %}
+      </li>
+      {% endfor %}
+<ul>
+
+  <a href="{{ section.settings.collection.url }}">
+    {{ section.settings.cta_label }}
+  </a>
+
+
+
+{% schema %}
+{
+  "name": "Featured Products",
+  "tag": "section",
+  "class": "section",
+  "templates": [
+    "index"
+  ],
+  "settings": [
+    {
+      "type": "product_list",
+      "id": "product_list",
+      "label": "Products to feature",
+      "limit": 3
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Parent Collection",
+      "info": "The collection this section should link to."
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "CTA Label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Products"
+    }
+  ]
+}
+{% endschema %}
