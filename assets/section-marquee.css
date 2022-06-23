@@ -1,0 +1,17 @@
+.section-marquee {
+    display: flex;
+    background-color: var(--quaternary-color);
+    flex-wrap: nowrap;
+    color: var(--primary-color);
+    font-family: var(--font-heading-alt-family);
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.section-marquee * {
+    display: block;
+    flex-shrink: 0;
+    margin-right: 2rem;
+    line-height: 1;
+    font-size: 1.5rem;
+}
