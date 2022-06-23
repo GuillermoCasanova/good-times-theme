@@ -22,7 +22,7 @@
         </div>
 
         <div class="featured-product__images-wrapper">
-          <a aria-label="View full {{ product.title }} page" href="{{product.url}}" class="featured-product__image">
+          <a title="Go to {{ product.title }} product page" href="{{ product.url }}" class="featured-product__image">
             {%- for media in product.images -%}
                 <img
                   srcset="{% if media.width >= 493 %}{{ media | image_url: width: 493 }} 493w,{% endif %}
