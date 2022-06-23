@@ -86,13 +86,13 @@ body {
 
 @media screen and (min-width: 990px) {
     :root {
-        font-size: .9rem;
+        font-size: .8rem;
     }
 }
 
 @media screen and (min-width: 1300px) {
     :root {
-        font-size: .95rem;
+        font-size: .85rem;
     }
 }
 

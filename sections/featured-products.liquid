@@ -38,36 +38,51 @@
 
 <div class="featured-products__inner page-width">
 
-  <div role="presentation">
+  <div role="presentation" class="featured-products__list">
     {%- for product in section.settings.product_list -%}
-    <span>
-      <a href="{{ product.url }}" rel="internal" title="View {{ product.title }}" tabindex="-1">{{ product.title }}</a>
-    </span>
+      <a href="#{{ product.handle }}" rel="internal" title="View {{ product.title }}" tabindex="-1" class="featured-products__list__item {% if product.selected_or_first_available_variant.available == false %} is-sold-out{% endif %}">
+          <span>
+            <span class="product-legend-key">
+              {% cycle 'A', 'B', 'C', 'D' %}
+            </span>
+            <span class="product-legend-name">
+              {{ product.title }} 
+            </span>
+          </span>
+          <span> 
+            {% render 'price', product: product, price_class: '' %}
+          </span>
+      </a>
     {% endfor %}
   </div>
 
-      <ul id="Slider-{{ section.id }}" class="grid product-grid grid--1-col  grid--3-col-tablet ">
+  <ul class="grid product-grid grid--1-col  grid--3-col-desktop featured-products__products">
 
-          {%- for product in section.settings.product_list -%}
-            <li  class="grid__item">
-              {% render 'card-product',
-                card_product: product,
-                show_secondary_image: true
-                show_vendor: true
-                show_rating: false
-                show_quick_add: false,
-                section_id: section.id
-              %}
-            </li>
-            {% endfor %}
-      <ul>
+      {%- for product in section.settings.product_list -%}
+        <li  class="grid__item " id="{{ product.handle }}">
+          <div class="featured-products__products__item">
+            <span class="product-legend-key">
+              {% cycle 'A', 'B', 'C', 'D', 'E' %}
+            </span>
+            {% render 'card-product',
+              card_product: product,
+              show_secondary_image: true
+              show_vendor: true
+              show_rating: false
+              show_quick_add: false,
+              section_id: section.id
+            %}
+          </div>
+        </li>
+        {% endfor %}
+  </ul>
 
-      <div>
-
-      <a href="{{ section.settings.collection.url }}">
-        {{ section.settings.cta_label }}
-      </a>
+  <div class="featured-products__cta">
+    <a href="{{ section.settings.collection.url }}">
+      {{ section.settings.cta_label }}
+    </a>
   </div>
+  
 </div>
 
 
