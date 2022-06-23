@@ -268,7 +268,23 @@
 
                     {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                       <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
-                      <div class="product-form__buttons">
+                      <div class="product-form__buttons  product-form__price-buttons">
+                        <div class="product__price-container">
+                          <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+                            {%- render 'price', product: product, use_variant: true, show_badges: false, price_class: 'price--large' -%}
+                          </div>
+                          {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
+                            <div class="product__tax caption rte">
+                              {%- if shop.taxes_included -%}
+                                {{ 'products.product.include_taxes' | t }}
+                              {%- endif -%}
+                              {%- if shop.shipping_policy.body != blank -%}
+                                {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                              {%- endif -%}
+                            </div>
+                          {%- endif -%}
+                        </div>
+                        
                         <button
                           type="submit"
                           name="add"
@@ -288,9 +304,6 @@
                               </svg>
                             </div>
                         </button>
-                        {%- if block.settings.show_dynamic_checkout -%}
-                          {{ form | payment_button }}
-                        {%- endif -%}
                       </div>
                     {%- endform -%}
                   </product-form>
