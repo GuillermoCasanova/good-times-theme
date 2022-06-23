@@ -83,7 +83,7 @@
               </p>
               {%- when 'vendor' -%}
                 <p class="product__vendor" {{ block.shopify_attributes }}>
-                  {{- block.settings.text -}}
+                  {{- block.settings.name -}}
                 </p>
             {%- when 'title' -%}
               <h2 class="product__title {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
