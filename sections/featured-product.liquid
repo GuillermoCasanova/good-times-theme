@@ -27,6 +27,12 @@
   <div class="page-width section-{{ section.id }}-padding{% if section.settings.secondary_background %} isolate{% endif %}">
     <div class="featured-product product grid grid--1-col gradient color-{{ section.settings.color_scheme }}{% if section.settings.secondary_background == false %} isolate{% endif %} {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item">
+        <div class="featured-product__new-starburst">
+          <svg aria-hidden="true" focusable="false" role="presentation">
+            <use href="#new-starburst">
+          </svg>
+        </div>
+
         <div class="featured-product__images-wrapper">
           <div class="featured-product__image">
             {%- for media in product.images -%}
@@ -72,9 +78,13 @@
                   </div>
                 {%- endif -%}
             {%- when 'text' -%}
-              <p class="product__text{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}" {{ block.shopify_attributes }}>
+              <p class="product__text" {{ block.shopify_attributes }}>
                 {{- block.settings.text -}}
               </p>
+              {%- when 'vendor' -%}
+                <p class="product__vendor" {{ block.shopify_attributes }}>
+                  {{- block.settings.text -}}
+                </p>
             {%- when 'title' -%}
               <h2 class="product__title {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
                 {%- if product.title != blank -%}
@@ -431,26 +441,18 @@
           "id": "text",
           "default": "Text block",
           "label": "t:sections.featured-product.blocks.text.settings.text.label"
-        },
+        }
+      ]
+    },
+    {
+      "type": "vendor",
+      "name": "Vendor",
+      "settings": [
         {
-          "type": "select",
-          "id": "text_style",
-          "options": [
-            {
-              "value": "body",
-              "label": "t:sections.featured-product.blocks.text.settings.text_style.options__1.label"
-            },
-            {
-              "value": "subtitle",
-              "label": "t:sections.featured-product.blocks.text.settings.text_style.options__2.label"
-            },
-            {
-              "value": "uppercase",
-              "label": "t:sections.featured-product.blocks.text.settings.text_style.options__3.label"
-            }
-          ],
-          "default": "body",
-          "label": "t:sections.featured-product.blocks.text.settings.text_style.label"
+          "type": "text",
+          "id": "name",
+          "default": "Text block",
+          "label": "Vendor Name"
         }
       ]
     },
