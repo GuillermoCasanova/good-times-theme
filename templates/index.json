@@ -59,6 +59,18 @@
         "product": "easter-sunday-hay-lila-corduroy"
       }
     },
+    "1655981633dc84401b": {
+      "type": "featured-products",
+      "settings": {
+        "product_list": [
+          "clocks-t-shirt",
+          "striped-button-up",
+          "easter-sunday-hay-lila-corduroy"
+        ],
+        "collection": "merch",
+        "cta_label": "Shop All Good Times"
+      }
+    },
     "16560868213dc9eca6": {
       "type": "lookbook-slideshow",
       "blocks": {
@@ -103,24 +115,12 @@
       "settings": {
         "name": ""
       }
-    },
-    "1655981633dc84401b": {
-      "type": "featured-products",
-      "settings": {
-        "product_list": [
-          "clocks-t-shirt",
-          "striped-button-up",
-          "easter-sunday-hay-lila-corduroy"
-        ],
-        "collection": "merch",
-        "cta_label": "Shop All Good Times"
-      }
     }
   },
   "order": [
     "image_banner",
     "16559285361788393d",
-    "16560868213dc9eca6",
-    "1655981633dc84401b"
+    "1655981633dc84401b",
+    "16560868213dc9eca6"
   ]
 }
