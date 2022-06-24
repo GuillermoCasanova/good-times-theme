@@ -4,22 +4,29 @@
     flex-wrap: nowrap;
     color: var(--primary-color);
     font-family: var(--font-heading-alt-family);
-    padding-bottom: 1.5rem;
-    padding-top: 1rem;
+    padding-bottom: 1.15rem;
+    padding-top: .4em;
 }
 
 .section-marquee__scroll-container {
     display: block;
     flex-shrink: 0;
     line-height: 1;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     position: relative;
     animation: marquee-scroll 30s linear infinite;
 }
 
+
+
 .section-marquee__scroll-container span {
-    margin-right: 2.5rem;
+    margin-right: 1.25rem;
 }
+
+.section-marquee__scroll-container .icon {
+    font-size: 1.9rem;
+}
+
 
 @keyframes marquee-scroll {
     100% {
