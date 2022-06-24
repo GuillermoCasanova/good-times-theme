@@ -1013,11 +1013,6 @@ summary::-webkit-details-marker {
 
 }
 
-@media screen and (min-width: 990px) {
-  .product-grid.grid {
-    column-gap: 4.5rem;
-  }
-}
 
 .grid:last-child {
   margin-bottom: 0;
