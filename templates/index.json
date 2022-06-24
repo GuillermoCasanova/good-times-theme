@@ -70,11 +70,18 @@
         "collection": "merch",
         "cta_label": "Shop Good Times"
       }
+    },
+    "16560868213dc9eca6": {
+      "type": "lookbook-slideshow",
+      "settings": {
+        "name": ""
+      }
     }
   },
   "order": [
     "image_banner",
     "16559285361788393d",
-    "1655981633dc84401b"
+    "1655981633dc84401b",
+    "16560868213dc9eca6"
   ]
 }
