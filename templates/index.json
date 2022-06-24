@@ -73,6 +73,37 @@
     },
     "16560868213dc9eca6": {
       "type": "lookbook-slideshow",
+      "blocks": {
+        "3803de2f-14ff-4030-9a74-22f8d4edb6da": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Vector_Smart_Object.png"
+          }
+        },
+        "a498d71e-5b12-445c-b949-ea953820e4d1": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Vector_Smart_Object-2.png"
+          }
+        },
+        "1dfbd0af-fba5-486d-9993-524b15164bd4": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_4445.png"
+          }
+        },
+        "b59f8518-44c8-4f11-874d-09402d1ab9a1": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "3803de2f-14ff-4030-9a74-22f8d4edb6da",
+        "a498d71e-5b12-445c-b949-ea953820e4d1",
+        "1dfbd0af-fba5-486d-9993-524b15164bd4",
+        "b59f8518-44c8-4f11-874d-09402d1ab9a1"
+      ],
       "settings": {
         "name": ""
       }
