@@ -23,6 +23,11 @@
     max-width: 35.5rem;
 }
 
+
+.featured-products__products {
+    margin-bottom: 1.5rem;
+}
+
 .featured-products__list {
     grid-area: list;
 }
