@@ -242,6 +242,7 @@
     transform: rotate(7deg);
 }
 
+
 @media only screen and (min-width: 700px) {
     .featured-products__cta__arrow-pointer {
         position: absolute;
@@ -251,4 +252,8 @@
         height: 4rem;
         transform: rotate(7deg);
     }
+}
+
+.featured-products__cta__arrow-pointer svg {
+    width: 100%;
 }

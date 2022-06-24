@@ -214,7 +214,7 @@
     transition: transform var(--duration-long) ease;
   }
 
-  .card-wrapper:hover .media.media--hover-effect>img:first-child:not(:only-child) {
+  0 .card-wrapper:hover .media.media--hover-effect>img:first-child:not(:only-child) {
     opacity: 0;
   }
 

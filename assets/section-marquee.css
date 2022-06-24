@@ -8,10 +8,22 @@
     padding-top: 1rem;
 }
 
-.section-marquee * {
+.section-marquee__scroll-container {
     display: block;
     flex-shrink: 0;
-    margin-right: 2rem;
     line-height: 1;
     font-size: 1.5rem;
+    position: relative;
+    animation: marquee-scroll 30s linear infinite;
+}
+
+.section-marquee__scroll-container span {
+    margin-right: 2.5rem;
+}
+
+@keyframes marquee-scroll {
+    100% {
+        transform: translateX(-50%);
+    }
+
 }
