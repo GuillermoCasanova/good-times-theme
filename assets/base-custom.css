@@ -3,17 +3,10 @@ body {
     position: relative;
 }
 
+
+
 body {
-    background-color: rgb(249, 247, 241) !important;
-    background-image:
-        radial-gradient(at 72% 63%, rgb(251, 245, 231) 0px, transparent 50%),
-        radial-gradient(at 97% 13%, rgb(234, 219, 193) 0px, transparent 50%),
-        radial-gradient(at 31% 72%, hsla(43, 100%, 93%, 1) 0px, transparent 50%),
-        radial-gradient(at 1% 78%, hsla(42, 53%, 83%, 1) 0px, transparent 50%),
-        radial-gradient(at 61% 9%, hsla(45, 38%, 87%, 1) 0px, transparent 50%),
-        radial-gradient(at 49% 54%, hsla(41, 100%, 87%, 1) 0px, transparent 50%),
-        radial-gradient(at 93% 90%, hsla(43, 50%, 81%, 1) 0px, transparent 50%),
-        radial-gradient(at 2% 17%, hsla(44, 100%, 93%, 1) 0px, transparent 50%) !important;
+    background-color: rgb(241, 237, 225) !important;
 }
 
 .site-wrapper {
@@ -110,4 +103,34 @@ body {
     :root {
         font-size: 1.05rem;
     }
+}
+
+
+.button {
+    border-radius: 100%;
+    width: 100%;
+    font-family: var(--font-heading-family);
+    color: black;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 0;
+    outline: 0;
+    border: none;
+}
+
+.button--medium {
+    font-size: 2rem;
+    padding-top: 1.75rem;
+    padding-bottom: 2rem;
+    line-height: 1;
+}
+
+.button--primary {
+    border: 8px solid var(--quaternary-color);
+    background-color: transparent;
+}
+
+.button--primary:hover {
+    color: var(--primary-color);
+    background-color: var(--quaternary-color);
 }

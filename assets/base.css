@@ -1326,7 +1326,6 @@ button.shopify-payment-button__button--unbranded {
   background-color: rgba(var(--color-button), var(--alpha-button-background));
 }
 
-.button:before,
 .shopify-challenge__button:before,
 .customer button:before,
 .shopify-payment-button__button--unbranded:before,
@@ -1343,7 +1342,6 @@ button.shopify-payment-button__button--unbranded {
   box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset) var(--shadow-blur-radius) rgba(var(--color-shadow), var(--shadow-opacity));
 }
 
-.button:after,
 .shopify-challenge__button:after,
 .customer button:after,
 .shopify-payment-button__button--unbranded:after {
@@ -1360,7 +1358,6 @@ button.shopify-payment-button__button--unbranded {
   transition: box-shadow var(--duration-short) ease;
 }
 
-.button:not([disabled]):hover::after,
 .shopify-challenge__button:hover::after,
 .customer button:hover::after,
 .shopify-payment-button__button--unbranded:hover::after {
@@ -2801,7 +2798,6 @@ details-disclosure>details {
 
 .badge {
   border: 1px solid transparent;
-  border-radius: var(--badge-corner-radius);
   display: inline-block;
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
@@ -2814,6 +2810,17 @@ details-disclosure>details {
   word-break: break-word;
 }
 
+
+.badge--sold-out {
+  background-color: #d60004;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-family: var(--font-heading-alt-family);
+  padding-bottom: 1rem;
+  transform: rotate(-10deg);
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
 
 @media screen and (forced-colors: active) {
   .icon {
