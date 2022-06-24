@@ -50,9 +50,9 @@
        </div>
       </div>
       <div class="product__info-wrapper grid__item">
-        <span class="featured-product__featured-line">
+        {% comment %} <span class="featured-product__featured-line">
           Featured Item
-        </span>
+        </span> {% endcomment %}
         <div id="ProductInfo-{{ section.id }}" class="product__info-container">
           {%- assign product_form_id = 'product-form-' | append: section.id -%}
 

@@ -2376,7 +2376,9 @@ input[type='checkbox'] {
   padding: 0;
 }
 
-.menu-open .header__icon--cart {
+.menu-open .header__icon--cart,
+.is-subpage .header__icon--menu,
+.is-subpage .header__icon--cart {
   color: black;
 }
 
@@ -2551,6 +2553,10 @@ details[open]>.header__icon--menu .icon-close {
   color: black;
 }
 
+.is-subpage .header__icon--menu .icon-hamburger {
+  color: black;
+}
+
 .js details[open]:not(.menu-opening)>.header__icon--menu .icon-close {
   visibility: hidden;
 }
@@ -2593,7 +2599,8 @@ details[open]>.header__submenu {
   transition: height var(--duration-default) ease;
 }
 
-.header.is-hovered .header__menu-item {
+.header.is-hovered .header__menu-item,
+.header.is-subpage .header__menu-item {
   color: black;
 }
 
