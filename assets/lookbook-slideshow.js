@@ -5,12 +5,10 @@ class LookbookSlideshow extends HTMLElement {
     constructor() {
         super(); 
         this.selectors = {
-            slideshow: '[data-lookbook-images-slideshow]', 
-            slideshowWrapper: '[data-lookbook-images-slideshow-wrapper]',
-            slides: '[data-lookbook-images-slideshow-slide]',
-            pagination: '[data-lookbook-images-slideshow-pagination]',
-            paginationWrapper: '[data-lookbook-images-slideshow-pagination-wrapper]',
-            paginationThumbs: '[data-lookbook-images-slideshow-pagination-thumb]'
+            slideshow: '[data-slideshow]', 
+            slideshowWrapper: '[data-slideshow-wrapper]',
+            slides: '[data-slideshow-slide]',
+            navigation: '[data-slideshow-navigation]'
         }
 
         this.mediaQueries = {
@@ -21,7 +19,6 @@ class LookbookSlideshow extends HTMLElement {
     }
   
     init() {
-        console.log(this);
         this.mediaQueries.largeUp.addEventListener("change", this.handleLargeUp.bind(this)); 
         this.handleLargeUp(this.mediaQueries.largeUp); 
     } 
@@ -29,26 +26,20 @@ class LookbookSlideshow extends HTMLElement {
     handleLargeUp(pEvent) {
         let slideshowProps = {}; 
 
-        console.log('INIT SLIDESHOW');
-
         slideshowProps = {
             direction: 'horizontal', 
-            loop: true,
             preventInteractionOnTransition: true,
-            pagination: {
-                el: this.selectors.pagination,
-                clickable: true,
-                renderBullet: function (index, className) {
-                    return '<button aria-label="Slide to product image ' + (index + 1) + '" class="' + className + '"><span class="visually-hidden">' + 'Slide to product image ' + (index + 1) + "</span></button>";
-                }
-            },
+            slidesPerView: 1,
             breakpoints: {
                 600: {
                     slidesPerView: 2,
                     grabCursor: true
                 },
-                930: {
-                    slidesPerView: 3
+                990: {
+                    spaceBetween: 40,
+                    slidesPerView: 3,
+                    centeredSlides: true,
+                    grabCursor: true
                 }
             }
         }
