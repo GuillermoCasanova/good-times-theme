@@ -77,21 +77,27 @@ body {
     font-size: .8rem;
 }
 
-@media screen and (min-width: 990px) {
-    :root {
-        font-size: .8rem;
-    }
-}
-
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 400px) {
     :root {
         font-size: .85rem;
     }
 }
 
+@media screen and (min-width: 990px) {
+    :root {
+        font-size: .85rem;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    :root {
+        font-size: .9rem;
+    }
+}
+
 
 /*X-LARGE-UP*/
-@media screen and (min-width: 1681px) {
+@media screen and (min-width: 1600px) {
     :root {
         font-size: 1rem;
     }
