@@ -1010,6 +1010,13 @@ summary::-webkit-details-marker {
     column-gap: var(--grid-desktop-horizontal-spacing);
     row-gap: var(--grid-desktop-vertical-spacing);
   }
+
+}
+
+@media screen and (min-width: 990px) {
+  .product-grid.grid {
+    column-gap: 4.5rem;
+  }
 }
 
 .grid:last-child {

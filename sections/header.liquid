@@ -104,7 +104,7 @@
   <div class="header-background" data-header-background>
     
   </div>
-  <header class="header {% if section.settings.menu != blank %} header--has-menu{% endif %}     {%- if request.page_type != 'index' -%} is-subpage{%endif%}">
+  <header class="header {% if section.settings.menu != blank %} header--has-menu{% endif %}     {%- if request.page_type != 'index' -%} is-subpage {% endif %}">
     {%- if section.settings.menu != blank -%}
       <header-drawer data-breakpoint="tablet">
         <details id="Details-menu-drawer-container" class="menu-drawer-container">
