@@ -4,7 +4,6 @@ body {
 }
 
 
-
 body {
     background-color: rgb(241, 237, 225) !important;
 }
@@ -28,6 +27,10 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+svg {
+    width: 100%;
 }
 
 .website-texture {

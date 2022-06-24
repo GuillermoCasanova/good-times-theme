@@ -23,7 +23,8 @@
 
         <div class="featured-product__images-wrapper">
           <a title="Go to {{ product.title }} product page" href="{{ product.url }}" class="featured-product__image">
-            {%- for media in product.images -%}
+            {%- if product.metafields.images.featured_shot != blank -%}
+                {% assign media =  product.metafields.images.featured_shot %}
                 <img
                   srcset="{% if media.width >= 493 %}{{ media | image_url: width: 493 }} 493w,{% endif %}
                     {% if media.width >= 600 %}{{ media | image_url: width: 600 }} 600w,{% endif %}
@@ -44,7 +45,7 @@
                   height="{{ 973 | divided_by: media.aspect_ratio | ceil }}"
                   alt="{{ media.alt | escape }}"
                 >
-            {%- endfor -%}
+                {%- endif -%}
           </a>
        </div>
       </div>

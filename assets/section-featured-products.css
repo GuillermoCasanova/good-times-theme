@@ -6,8 +6,15 @@
 
 @media only screen and (min-width: 990px) {
     .featured-products__inner {
+        border-bottom: 3px solid black;
+
+    }
+}
+
+@media only screen and (min-width: 990px) {
+    .featured-products__inner {
         padding-top: 6rem;
-        padding-bottom: 6rem;
+        padding-bottom: 3rem;
         display: grid;
         grid-template-rows: repeat(1, minmax(0, 1fr));
         grid-template-areas: 'products'
@@ -25,8 +32,15 @@
 
 
 .featured-products__products {
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
 }
+
+@media only screen and (min-width: 700px) {
+    .featured-products__products {
+        margin-bottom: 3.5rem;
+    }
+}
+
 
 .featured-products__list {
     grid-area: list;
@@ -98,6 +112,13 @@
     font-size: 1.25rem;
 }
 
+@media only screen and (min-width: 700px) {
+    .product-legend-key {
+        height: 1.75rem;
+        width: 1.75rem;
+        font-size: 1.15rem;
+    }
+}
 
 .featured-products__products {
     grid-area: products;
@@ -112,7 +133,7 @@
 
 @media only screen and (min-width: 700px) {
     .featured-products__products__item {
-        max-width: 33rem;
+        max-width: 28rem;
         width: 50%;
         min-width: 20rem;
     }
@@ -183,7 +204,7 @@
 
     .featured-products__products .grid__item:nth-child(1),
     .featured-products__products .grid__item:nth-child(3) {
-        margin-top: 9rem;
+        margin-top: 6rem;
     }
 
     .featured-products__products .grid__item:nth-child(3) {
@@ -195,16 +216,39 @@
 
 .featured-products__cta {
     margin-bottom: 6rem;
+    position: relative;
+    max-width: 28rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media only screen and (min-width: 990px) {
-
     .featured-products__cta {
         position: absolute;
-        bottom: 0;
+        bottom: -2rem;
         right: 6rem;
         margin-bottom: 10rem;
         max-width: 25rem;
         width: 100%;
+    }
+}
+
+.featured-products__cta__arrow-pointer {
+    position: absolute;
+    left: 1rem;
+    top: -9rem;
+    width: 4rem;
+    height: 4rem;
+    transform: rotate(7deg);
+}
+
+@media only screen and (min-width: 700px) {
+    .featured-products__cta__arrow-pointer {
+        position: absolute;
+        left: -5rem;
+        top: -5rem;
+        width: 4rem;
+        height: 4rem;
+        transform: rotate(7deg);
     }
 }

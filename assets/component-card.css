@@ -74,7 +74,7 @@
 
 .card__media {
   margin: var(--card-image-padding);
-  width: calc(100% - 2 * var(--card-image-padding));
+  width: 100%;
 }
 
 .card--standard .card__media {
@@ -83,7 +83,7 @@
 
 .card__inner {
   width: 100%;
-  padding-bottom: 100%;
+  padding-bottom: 106%;
   overflow: hidden;
   position: relative;
 }
@@ -212,11 +212,6 @@
   .card .media.media--hover-effect>img:only-child,
   .card-wrapper .media.media--hover-effect>img:only-child {
     transition: transform var(--duration-long) ease;
-  }
-
-  .card:hover .media.media--hover-effect>img:first-child:only-child,
-  .card-wrapper:hover .media.media--hover-effect>img:first-child:only-child {
-    transform: scale(1.03);
   }
 
   .card-wrapper:hover .media.media--hover-effect>img:first-child:not(:only-child) {
