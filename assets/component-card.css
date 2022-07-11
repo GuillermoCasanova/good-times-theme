@@ -41,6 +41,10 @@
   box-shadow: var(--card-shadow-horizontal-offset) var(--card-shadow-vertical-offset) var(--card-shadow-blur-radius) rgba(var(--color-shadow), var(--card-shadow-opacity));
 }
 
+.card--square-media .card__inner {
+  padding-bottom: 98%;
+}
+
 .card .card__inner .card__media {
   overflow: hidden;
   /* Fix for Safari border bug on hover */
@@ -84,7 +88,6 @@
 .card__inner {
   width: 100%;
   padding-bottom: 106%;
-  overflow: hidden;
   position: relative;
 }
 
@@ -121,6 +124,19 @@
   }
 }
 
+.card__vendor {
+  background-color: var(--quaternary-color);
+  display: inline-block;
+  color: var(--primary-color);
+  font-family: Var(--neue-haas-unica);
+  font-weight: bold;
+  font-size: .9rem;
+  margin-bottom: .5rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  text-transform: uppercase;
+}
+
 .card__badge {
   align-self: flex-end;
   grid-row-start: 3;
@@ -154,7 +170,7 @@
 
 .card__heading {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: .25rem;
 }
 
 .card__heading:last-child {
@@ -163,6 +179,13 @@
 
 .card--card.card--media>.card__content {
   margin-top: calc(0rem - var(--card-image-padding));
+}
+
+.card__heading a {
+  font-family: var(--font-body-family);
+  letter-spacing: 0;
+  font-weight: normal;
+  font-size: 1.5rem;
 }
 
 .card--standard.card--text a::after,
@@ -207,6 +230,7 @@
   outline: 0;
 }
 
+
 @media screen and (min-width: 990px) {
 
   .card .media.media--hover-effect>img:only-child,
@@ -224,9 +248,8 @@
     transform: scale(1.03);
   }
 
-  .underline-links-hover:hover a {
-    text-decoration: underline;
-    text-underline-offset: 0.3rem;
+  .card-wrapper:hover {
+    cursor: pointer;
   }
 }
 
@@ -275,9 +298,6 @@
   overflow: hidden;
 }
 
-.card-information>*+* {
-  margin-top: 0.5rem;
-}
 
 .card-information {
   width: 100%;
@@ -290,15 +310,14 @@
 
 .card-information>.price {
   color: rgb(var(--color-foreground));
+  font-size: 1.5rem;
+  font-weight: var(--font-body-weight-bold);
 }
 
 .card-information>.rating {
   margin-top: 0.4rem;
 }
 
-.card-information>*:not(.visually-hidden:first-child)+*:not(.rating) {
-  margin-top: 0.7rem;
-}
 
 .card-information .caption {
   letter-spacing: 0.07rem;
@@ -306,4 +325,72 @@
 
 .card-article-info {
   margin-top: 1rem;
+}
+
+
+/*Custom CSS*/
+.card__product-variants {
+  display: flex;
+  font-size: 1.15rem;
+  margin-bottom: .25rem;
+}
+
+.card__product-variants ul {
+  display: flex;
+  list-style: none;
+  padding-left: .5rem;
+}
+
+.card__product-variants li:after {
+  content: ",";
+  position: relative;
+}
+
+.card__product-variants li {
+  margin-right: .25rem;
+}
+
+.card__product-variants li:last-child:after {
+  content: "";
+}
+
+
+.card-wrapper:hover .hover-stroke,
+.card-wrapper:focus .hover-stroke {
+  stroke-dashoffset: 0;
+  transition: all .4s cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+.hover-stroke {
+  position: absolute;
+  z-index: 2;
+  width: 105%;
+  height: 105%;
+  top: -2rem;
+  bottom: 0;
+  left: -2rem;
+  color: var(--tertiary-color);
+  stroke-dashoffset: 1110;
+  stroke-dasharray: 1110;
+  transition: all .2s cubic-bezier(0.83, 0, 0.17, 1);
+  -webkit-mask-image: url(path-mask.png);
+  mask-image: url(path-mask.png);
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  opacity: 1;
+  -webkit-mask-position: 100%;
+  transform: rotate(8deg);
+}
+
+.card--square-media .hover-stroke {
+  -webkit-mask-size: 100%;
+  top: -1rem;
+  left: -4rem;
+  transform: rotate(10deg);
+}
+
+.hover-stroke svg {
+  width: 100%;
+  height: 100%;
 }
