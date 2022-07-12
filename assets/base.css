@@ -2813,7 +2813,6 @@ details-disclosure>details {
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
   line-height: 1;
-  padding: 0.6rem 1.3rem;
   text-align: center;
   background-color: rgb(var(--color-badge-background));
   border-color: rgba(var(--color-badge-border), var(--alpha-badge-border));
@@ -2823,15 +2822,40 @@ details-disclosure>details {
 
 
 .badge--sold-out {
-  background-color: #d60004;
   color: var(--primary-color);
+  background-color: transparent;
   text-transform: uppercase;
   font-family: var(--font-heading-alt-family);
-  padding-bottom: 1rem;
-  transform: rotate(-10deg);
-  margin-bottom: 2rem;
-  font-size: 1.5rem;
+  transform: rotate(-9deg);
+  outline: none;
+  border: none;
+  width: 75%;
+  top: -3.70rem;
+  position: relative;
+  display: block;
 }
+
+.badge--sold-out svg {
+  width: 100%;
+}
+
+@media only screen and (min-width: 700px) {
+  .badge--sold-out {
+    width: 60%;
+    top: -2.5rem;
+  }
+}
+
+
+@media only screen and (min-width: 990px) {
+  .badge--sold-out {
+    width: 70%;
+    max-width: 16rem;
+    top: -1.75rem;
+  }
+}
+
+
 
 @media screen and (forced-colors: active) {
   .icon {

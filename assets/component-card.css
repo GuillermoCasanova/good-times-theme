@@ -138,7 +138,6 @@
 }
 
 .card__badge {
-  align-self: flex-end;
   grid-row-start: 3;
   justify-self: flex-start;
   position: absolute;

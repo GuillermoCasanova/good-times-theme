@@ -1,0 +1,34 @@
+.featured-collection .collection__title {
+    text-transform: uppercase;
+    font-size: 4.5rem;
+    line-height: 1.25;
+    text-shadow: var(--headline-shadow);
+    color: var(--primary-color);
+    margin-top: 0;
+    max-width: 34rem;
+}
+
+@media screen and (min-width: 990px) {
+    .featured-collection .collection__title {
+        font-size: 5rem;
+        max-width: 100%;
+    }
+}
+
+
+
+.featured-collection .product__description {
+    max-width: 25rem;
+    font-size: 1.3rem;
+    line-height: 1.45;
+    margin-right: 0;
+    margin-left: auto;
+    margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 990px) {
+    .featured-collection .product__description {
+        max-width: 30rem;
+        margin-right: 6rem;
+    }
+}

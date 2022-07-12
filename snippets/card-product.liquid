@@ -200,7 +200,14 @@
         {%- endif -%}
         <div class="card__badge {{ settings.badge_position }}">
           {%- if card_product.available == false -%}
-            <span class="badge badge--bottom-left badge--sold-out">{{ 'products.product.sold_out' | t }}</span>
+            <span class="badge badge--bottom-left badge--sold-out">
+              <svg aria-hidden="true" focusable="false" role="presentation">
+                <use href="#sold-out-badge">
+              </svg>
+              <span class="visually-hidden">
+                {{ 'products.product.sold_out' | t }}
+              </span>
+            </span>
           {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
             <span class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}">{{ 'products.product.on_sale' | t }}</span>
           {%- endif -%}
