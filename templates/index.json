@@ -146,7 +146,7 @@
     "1657649331bb84bf19": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured collection",
+        "title": "{{ section.settings.collection.title }}",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
@@ -173,7 +173,7 @@
     "1657649318d3a43177": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured collection",
+        "title": "{{ section.settings.collection.title }}",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
