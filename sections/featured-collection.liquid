@@ -50,8 +50,8 @@
 -%}
 
 
-  <div class="collection page-width featured-collection">
-    <div class="grid   grid--1-col  grid--2-col-desktop">
+  <div class="collection page-width featured-collection {% if section.settings.order_desktop == 'right' %}featured-collection--reverse{% endif %}">
+    <div class="grid   grid--1-col  grid--2-col-desktop ">
         <div class="featured-collection__products-wrapper grid__item" >
           <feat-collection-product-slideshow>
             <div data-product-images-slideshow class="featured-collection__products">
@@ -366,7 +366,7 @@
     {
       "type": "select",
       "id": "order_desktop",
-      "default": "left",
+      "default": "right",
       "label": "Column order",
       "options": [
         {
