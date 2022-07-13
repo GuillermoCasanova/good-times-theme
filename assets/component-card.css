@@ -108,6 +108,8 @@
   grid-template-rows: minmax(0, auto) max-content minmax(0, auto);
 }
 
+
+
 .card__information {
   grid-row-start: 2;
   padding: 1.3rem 1rem;
@@ -227,6 +229,15 @@
 .card__heading a:focus {
   box-shadow: none;
   outline: 0;
+}
+
+.card__heading.is-alt a {
+  display: inline-block;
+  line-height: 1;
+}
+
+.card__heading.is-alt a:after {
+  content: none;
 }
 
 

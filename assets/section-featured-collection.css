@@ -3,6 +3,10 @@
 \*------------------------------------*/
 
 
+.featured-collection {
+    margin-bottom: 2rem;
+}
+
 @media screen and (min-width: 990px) {
     .featured-collection.featured-collection--reverse .grid {
         flex-direction: row-reverse;
@@ -30,7 +34,6 @@
 }
 
 @media screen and (min-width: 990px) {
-
     .featured-collection__info-wrapper:after {
         content: " ";
         position: absolute;
@@ -39,18 +42,32 @@
         height: 100%;
         width: 65vw;
         z-index: -1;
-        right: -15vw;
+        right: -18vw;
         background: linear-gradient(-90deg, rgb(241, 237, 225) 80%, rgba(241, 237, 225, 0) 100%);
     }
 }
 
 @media screen and (min-width: 990px) {
     .featured-collection.featured-collection--reverse .featured-collection__info-wrapper:after {
-        left: -15vw;
+        left: -20vw;
         right: auto;
         background: linear-gradient(90deg, rgb(241, 237, 225) 80%, rgba(241, 237, 225, 0) 100%);
     }
+
+    .featured-collection.featured-collection--reverse .featured-collection__info-wrapper {
+        padding-left: 2rem;
+        margin-right: auto;
+        margin-left: 0;
+    }
 }
+
+
+@media screen and (min-width: 990px) {
+    .featured-collection.featured-collection--reverse .featured-collection__info {
+        padding-left: 3rem;
+    }
+}
+
 
 .featured-collection .collection__title {
     text-transform: uppercase;
@@ -58,13 +75,13 @@
     line-height: 1.25;
     text-shadow: var(--headline-shadow);
     color: var(--primary-color);
-    margin-top: -.75rem;
     max-width: 34rem;
+    margin-bottom: 2rem;
 }
 
 @media screen and (min-width: 990px) {
     .featured-collection .collection__title {
-        font-size: 5rem;
+        font-size: 7rem;
         max-width: 100%;
     }
 }
@@ -72,7 +89,7 @@
 
 
 .featured-collection .collection__description {
-    max-width: 25rem;
+    max-width: 32rem;
     font-size: 1.3rem;
     line-height: 1.45;
     margin-right: 0;
@@ -83,39 +100,75 @@
 @media screen and (min-width: 990px) {
     .featured-collection .collection__description {
         max-width: 30rem;
-        margin-right: 3rem;
-        margin-left: 3rem;
+        margin-left: 6rem;
+        margin-bottom: 1.75rem;
     }
 }
 
 
 .collection__view-all {
-    max-width: 20rem;
     margin-right: 0;
     left: auto;
     margin-left: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 32rem;
+}
+
+
+.collection__view-all a {
+    max-width: content;
+    width: auto;
+}
+
+.collection__view-all:before {
+    content: " ";
+    position: absolute;
+    height: 3px;
+    width: 27%;
+    background-color: black;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    margin-left: 0;
 }
 
 @media screen and (min-width: 990px) {
     .collection__view-all {
-        margin-right: 3rem;
+        max-width: 30rem;
     }
 }
 
 @media screen and (min-width: 990px) {
-    .featured-collection__products-wrapper {
-        max-width: 36rem !important;
+
+    feat-collection-product-slideshow {
+        margin-left: -3rem;
+        position: relative;
+        display: block;
+    }
+
+    .featured-collection.featured-collection--reverse feat-collection-product-slideshow {
+        margin-left: -6rem;
     }
 }
-
 
 .featured-collection__products {
     position: relative;
     padding-bottom: 110%;
     overflow: hidden;
-    margin-bottom: 1rem;
     width: 100%;
     list-style: none;
+}
+
+
+@media screen and (min-width: 990px) {
+    .featured-collection__products {
+        max-width: 46rem !important;
+        margin: auto;
+    }
 }
 
 
@@ -131,7 +184,8 @@
 
 
 .featured-collection__product.swiper-slide {
-    opacity: .3;
+    opacity: .4;
+    transition: all .2s ease-in-out;
 }
 
 .featured-collection__product.swiper-slide.swiper-slide-active {
@@ -150,10 +204,11 @@
 
 @media only screen and (min-width: 990px) {
     .featured-collection__product-descriptions {
-        max-width: 30rem;
+        max-width: 34rem;
         margin-left: auto;
         margin-right: auto;
         padding-left: 4rem !important;
+        margin-top: -1rem;
     }
 }
 
@@ -180,6 +235,21 @@
 
 .featured-collection__product-descriptions {
     position: relative;
+}
+
+@media only screen and (min-width: 990px) {
+    .featured-collection__product-description .card__heading a {
+        font-size: 1.25rem;
+    }
+
+    .featured-collection__product-description .card__information .price {
+        font-size: 1.25rem;
+    }
+
+    .featured-collection__product-description .card__information .card__vendor {
+        font-size: .8rem;
+    }
+
 }
 
 
