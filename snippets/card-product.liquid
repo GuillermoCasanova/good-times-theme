@@ -10,6 +10,7 @@
     - extend_height: {Boolean} Card height extends to available container space. Default: true (optional)
     - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
     - show_quick_add: {Boolean} Show the quick add button.
+    - hide_info: {Boolean} Hide product information as it'll display outside of the product card. 
     - section_id: {String} The ID of the section that contains this card.
 
     Usage:
@@ -22,7 +23,12 @@
   <div class="card-wrapper underline-links-hover">
     <div class="card
        card--media {% if card_product.tags contains 'thumb-ratio:square' %} card--square-media{% endif %}">
-       <div class="card__inner">
+       {% if hide_info == true %}
+        <a class="card__inner"  href="{{ card_product.url }}" class="full-unstyled-link">
+        {%else%}
+        <div class="card__inner">
+       {% endif %}
+
         <div class="hover-stroke">
           <svg aria-hidden="true" focusable="false" role="presentation">
             <use href="#hover-stroke">
@@ -30,7 +36,6 @@
         </div>
         {%- if card_product.featured_media -%}
           <div class="card__media">
-           
             <div class="media media--transparent media--hover-effect">
               {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
               <img
@@ -72,8 +77,14 @@
             </div>
           </div>
         {%- endif -%}
-      </div>
-      <div class="card__content">
+
+        {% if hide_info == true %}
+        </a>
+          {%else%}
+         </div>
+         {% endif %}
+
+      <div class="card__content {% if hide_info == true %}visually-hidden{% endif %}">
         <div class="card__information">
           {%- if show_vendor -%}
             <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
@@ -213,6 +224,7 @@
           {%- endif -%}
         </div>
       </div>
+
     </div>
   </div>
 {%- else -%}
