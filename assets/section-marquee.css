@@ -16,7 +16,7 @@
     position: relative;
     will-change: transform;
     transform: translateZ(0);
-    animation: marquee-scroll 30s linear infinite;
+    animation: marquee-scroll 100s linear infinite;
 }
 
 

@@ -104,7 +104,68 @@
   </div>
 
   <div class="collection-hero__marquee">
-  
+    {% if  section.settings.header_style == 'drops' %}
+      {% assign collection_type = 'Drops' %}
+    {%else%}
+      {% assign collection_type = 'Good Times' %}
+    {% endif %}
+    <div class="section-marquee" aria-hidden="true" role="presentation">
+      <div class="section-marquee__scroll-container">
+        <span>
+          <span class="icon">☻</span> Shop {{ collection_type }}
+        </span>
+        <span>
+          <span class="icon">☻</span> Shop {{ collection_type }}
+        </span>
+        <span>
+          <span class="icon">☻</span> Shop {{ collection_type }}
+        </span>
+        <span>
+          <span class="icon">☻</span> Shop {{ collection_type }}
+        </span>
+        <span>
+          <span class="icon">☻</span> Shop {{ collection_type }}
+        </span>
+        <span>
+          <span class="icon">☻</span> Shop {{ collection_type }}
+        </span>
+        <span>
+          <span class="icon">☻</span> Shop {{ collection_type }}
+        </span>
+        <span>
+          <span class="icon">☻</span> Shop {{ collection_type }}
+        </span>
+        <span>
+          <span class="icon">☻</span> Shop {{ collection_type }}
+        </span>
+        <span>
+          <span class="icon">☻</span> Shop {{ collection_type }}
+        </span>
+        <span>
+          <span class="icon">☻</span> Shop {{ collection_type }}
+        </span>
+        <span>
+          <span class="icon">☻</span> Shop {{ collection_type }}
+        </span>
+        <span>
+          <span class="icon">☻</span> Shop {{ collection_type }}
+        </span>
+        <span>
+          <span class="icon">☻</span> Shop {{ collection_type }}
+        </span>
+        <span>
+          <span class="icon">☻</span> Shop {{ collection_type }}
+        </span>
+        <span>
+          <span class="icon">☻</span> Shop {{ collection_type }}
+        </span>
+        <span>
+          <span class="icon">☻</span> Shop {{ collection_type }}
+        </span>
+        <span>
+          <span class="icon">☻</span> Shop {{ collection_type }}
+        </span>
+    </div>
   </div>
 </div>
 
@@ -161,6 +222,7 @@
     {
       "type": "select",
       "id": "header_style",
+      "label": "Header Style",
       "options": [
         {
           "value": "good-times",
