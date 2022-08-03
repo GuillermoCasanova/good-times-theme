@@ -1014,7 +1014,7 @@ summary::-webkit-details-marker {
 }
 
 
-.grid:last-child {
+.grid:last-child:not(.product-grid) {
   margin-bottom: 0;
 }
 
@@ -2268,7 +2268,6 @@ input[type='checkbox'] {
   margin: 0;
   line-height: 0;
   width: 10rem;
-  position: absolute;
   top: 0;
   transition: all var(--duration-default) ease;
 }
@@ -2285,13 +2284,14 @@ input[type='checkbox'] {
   display: flex;
   align-items: center;
   width: 12rem;
-  top: 1.15rem;
+  margin-top: 1rem;
   transform: scale(1) !important;
 }
 
 @media screen and (min-width: 750px) {
   .header__heading--wide {
-    top: 1.75rem;
+    margin-top: 1.5rem;
+    width: 13rem;
   }
 }
 

@@ -432,7 +432,6 @@ customElements.define('menu-drawer', MenuDrawer);
 class HeaderWrapper extends HTMLElement {
   constructor() {
     super();
-    console.log('hello');
     this.header = this.querySelector('header'); 
     this.headerBackground = this.querySelector('[data-header-background]'); 
     this.dropDownOpen = false; 
@@ -472,23 +471,21 @@ class HeaderWrapper extends HTMLElement {
     let height = this.header.clientHeight + 20; 
     this.header.classList.add('is-hovered'); 
 
-    console.log('show hover bg');
-    console.log(event.currentTarget);
-
-
 
     if(isDropdown) {
-      console.log(event.currentTarget); 
 
       // if(event.currentTarget.getAttribute('aria-expanded') === 'false') {
       //   this.headerBackground.style.height = height + 'px'; 
       //   return
       // }
 
+      console.log(isDropdown); 
       let additionalHeight = event.currentTarget.nextElementSibling.clientHeight; 
       height = additionalHeight + height; 
       this.style.height = height + 'px'; 
-      this.headerBackground.style.height = this.clientHeight +'px';
+      setTimeout(() => {
+        this.headerBackground.style.height = this.clientHeight +'px';
+      }, 10);
 
     }  else {
 
