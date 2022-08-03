@@ -116,7 +116,7 @@
                     lazy_load: lazy_load,
                     show_quick_add: section.settings.enable_quick_add,
                     section_id: section.id
-
+                    collection_style: section.settings.collection_style
                   %}
                 </li>
               {%- endfor -%}
@@ -286,6 +286,21 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "select",
+      "id": "collection_style",
+      "label": "Collection Style",
+      "options": [
+        {
+          "value": "good-times",
+          "label": "Good Times"
+        },
+        {
+          "value": "drops",
+          "label": "Drops"
+        }
+      ]
     }
   ]
 }

@@ -18,7 +18,8 @@
 }
 
 
-.collection-hero--drops {
+.collection-hero--drops .collection-hero__marquee,
+.collection-hero--drops .section-marquee {
   background-color: var(--quintenary-color);
 }
 
@@ -72,6 +73,14 @@
 @media screen and (min-width: 700px) {
   .collection-hero__title {
     font-size: 3.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .collection-hero__title {
+    font-size: 4.5rem;
   }
 }
 

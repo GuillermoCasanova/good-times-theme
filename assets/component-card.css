@@ -139,6 +139,10 @@
   text-transform: uppercase;
 }
 
+.card__vendor--drops {
+  background-color: var(--quintenary-color);
+}
+
 .card__badge {
   grid-row-start: 3;
   justify-self: flex-start;
