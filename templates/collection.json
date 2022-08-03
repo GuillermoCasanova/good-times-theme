@@ -3,7 +3,7 @@
     "banner": {
       "type": "main-collection-banner",
       "settings": {
-        "show_collection_description": true,
+        "show_collection_description": false,
         "show_collection_image": false,
         "color_scheme": "background-1"
       }
@@ -18,7 +18,7 @@
         "show_vendor": true,
         "show_rating": false,
         "enable_quick_add": false,
-        "enable_filtering": true,
+        "enable_filtering": false,
         "filter_type": "horizontal",
         "enable_sorting": true,
         "columns_mobile": "2",
