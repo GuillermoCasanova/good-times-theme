@@ -2282,11 +2282,17 @@ input[type='checkbox'] {
 
 
 .header__heading--wide {
-  bottom: 0;
   display: flex;
   align-items: center;
   width: 12rem;
+  top: 1.15rem;
   transform: scale(1) !important;
+}
+
+@media screen and (min-width: 750px) {
+  .header__heading--wide {
+    top: 1.75rem;
+  }
 }
 
 .header__heading--wide .header__heading-link {
@@ -2714,11 +2720,9 @@ details[open]>.header__menu-item .icon-caret {
   transform: rotate(180deg);
 }
 
-.header__active-menu-item {
-  transition: text-decoration-thickness var(--duration-short) ease;
-  color: rgb(var(--color-foreground));
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
+.header__active-menu-item:after,
+.header__active-menu-item:before {
+  opacity: 1;
 }
 
 

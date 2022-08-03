@@ -376,8 +376,8 @@
                 {%- if link.links != blank -%}
                   <header-menu>
                     <details id="Details-HeaderMenu-{{ forloop.index }}" >
-                      <summary data-hover-link data-click-link  class="header__menu-item list-menu__item link focus-inset">
-                        <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
+                      <summary data-hover-link data-click-link  class="header__menu-item list-menu__item link focus-inset {%- if link.child_active %} header__active-menu-item{% endif %}">
+                        <span>{{ link.title | escape }}</span>
                         {% render 'icon-caret' %}
                       </summary>
                       <ul id="HeaderMenu-MenuList-{{ forloop.index }}" class="header__submenu list-menu list-menu--disclosure  motion-reduce" role="list" tabindex="-1">
@@ -410,8 +410,8 @@
                     </details>
                   </header-menu>
                 {%- else -%}
-                  <a href="{{ link.url }}" data-hover-link class="header__menu-item header__menu-item list-menu__item  focus-inset"{% if link.current %} aria-current="page"{% endif %}>
-                    <span {%- if link.current %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
+                  <a href="{{ link.url }}" data-hover-link class="header__menu-item header__menu-item list-menu__item  focus-inset {%- if link.current %} header__active-menu-item {%  endif  %}"{% if link.current %} aria-current="page"{% endif %}>
+                    <span>{{ link.title | escape }}</span>
                   </a>
                 {%- endif -%}
               </li>

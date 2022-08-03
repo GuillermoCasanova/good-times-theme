@@ -57,7 +57,7 @@ body {
 
 .paper-texture-pattern-0 {
     z-index: 100;
-    opacity: .8;
+    opacity: .7;
     mix-blend-mode: multiply;
     background-repeat: repeat-y;
     background-size: cover;
@@ -66,7 +66,7 @@ body {
 .paper-texture-pattern-1 {
     mix-blend-mode: screen;
     z-index: 98;
-    opacity: .3;
+    opacity: .15;
     background-repeat: repeat;
 }
 
