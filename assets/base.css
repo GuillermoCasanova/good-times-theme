@@ -2280,7 +2280,21 @@ input[type='checkbox'] {
   padding-bottom: 100%;
 }
 
-.header__heading-link svg {
+
+.header__heading--wide {
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  width: 12rem;
+  transform: scale(1) !important;
+}
+
+.header__heading--wide .header__heading-link {
+  padding-bottom: 16%;
+}
+
+.header__heading-link svg,
+.header__heading-link img {
   width: 100%;
   position: absolute;
   height: 100%;
@@ -2601,7 +2615,7 @@ details[open]>.header__submenu {
   color: black;
 }
 
-.header.is-hovered .header__heading {
+.header.is-hovered:not(.is-subpage) .header__heading {
   width: 6rem;
 }
 
