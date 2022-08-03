@@ -70,7 +70,7 @@
 </div>
  {% endcomment %}
 
-<div class="collection-hero">
+<div class="collection-hero  {% if section.settings.header_style == 'drops' %}collection-hero--drops{% endif %}">
   <div class="collection-hero__inner page-width">
     <div class="collection-hero__text-wrapper">
       <h1 class="collection-hero__title">
@@ -101,6 +101,10 @@
         >
       </div>
     {%- endif -%}
+  </div>
+
+  <div class="collection-hero__marquee">
+  
   </div>
 </div>
 
@@ -153,6 +157,20 @@
       ],
       "default": "background-1",
       "label": "t:sections.all.colors.label"
+    },
+    {
+      "type": "select",
+      "id": "header_style",
+      "options": [
+        {
+          "value": "good-times",
+          "label": "Good Times"
+        },
+        {
+          "value": "drops",
+          "label": "Drops"
+        }
+      ]
     }
   ]
 }
