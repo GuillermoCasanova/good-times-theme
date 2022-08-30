@@ -30,13 +30,15 @@ class LookbookSlideshow extends HTMLElement {
             direction: 'horizontal', 
             preventInteractionOnTransition: true,
             slidesPerView: 1,
+            spaceBetween: 40,
             breakpoints: {
                 600: {
                     slidesPerView: 2,
+                    spaceBetween: 60,
                     grabCursor: true
                 },
                 990: {
-                    spaceBetween: 40,
+                    spaceBetween: 50,
                     slidesPerView: 3,
                     centeredSlides: true,
                     grabCursor: true

@@ -154,3 +154,11 @@ body {
     color: var(--primary-color);
     background-color: var(--quaternary-color);
 }
+
+
+/* Images */
+
+img {
+    width: 100%;
+    height: auto;
+}
