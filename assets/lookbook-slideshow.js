@@ -8,7 +8,8 @@ class LookbookSlideshow extends HTMLElement {
             slideshow: '[data-slideshow]', 
             slideshowWrapper: '[data-slideshow-wrapper]',
             slides: '[data-slideshow-slide]',
-            navigation: '[data-slideshow-navigation]'
+            navigation: '[data-slideshow-navigation]',
+            dragCursor: '[data-drag-cursor]'
         }
 
         this.mediaQueries = {
@@ -19,11 +20,45 @@ class LookbookSlideshow extends HTMLElement {
     }
   
     init() {
-        this.mediaQueries.largeUp.addEventListener("change", this.handleLargeUp.bind(this)); 
-        this.handleLargeUp(this.mediaQueries.largeUp); 
+        this.mediaQueries.largeUp.addEventListener("change", this.startSlideshow.bind(this)); 
+        this.startSlideshow(this.mediaQueries.largeUp); 
+        this.initDragCursor();
     } 
+
+
+    initDragCursor() {  
+        let dragCursor = this.querySelector(this.selectors.dragCursor);
+        let activeArea = this.querySelector(this.selectors.slideshowWrapper);
+
+        class getMouseCursor {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+            }
+        }
+
+        let mousePos = new getMouseCursor(0,0); 
+
+        activeArea.addEventListener('mousemove', (event) => {
+
+            mousePos.x = event.clientX - 50; 
+            mousePos.y = event.clientY - 50; 
+            console.log(mousePos.x);
+            console.log(mousePos.y);
+
+            dragCursor.style.opacity = 1; 
+            dragCursor.style.top = mousePos.y + "px"; 
+            dragCursor.style.left = mousePos.x + "px"; 
+
+        }, false); 
+
+        activeArea.addEventListener('mouseleave', (event) => {
+            dragCursor.style.opacity = 0; 
+        }, false); 
+
+    }
     
-    handleLargeUp(pEvent) {
+    startSlideshow(pEvent) {
         let slideshowProps = {}; 
 
         slideshowProps = {
@@ -68,13 +103,6 @@ class LookbookSlideshow extends HTMLElement {
             this.slideshow.detachEvents(); 
             this.slideshow.destroy(true, true); 
             this.slideshow = null; 
-        }
-        if(pToDestroy == 'thumbs' && this.slideshowThumbs) {
-            document.querySelector(this.selectors.thumbnails).classList.remove('swiper');
-            document.querySelector(this.selectors.thumbnailsWrapper).classList.remove('swiper-wrapper');
-            this.slideshowThumbs.detachEvents(); 
-            this.slideshowThumbs.destroy(true, true); 
-            this.slideshowThumbs = null; 
         }
     }
 }

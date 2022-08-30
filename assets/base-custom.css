@@ -1,6 +1,17 @@
 /* Custom Base CSS Styles */
 
 
+/* Colors */
+:root {
+
+    --primary-color: #ffffef;
+    --tertiary-color: #bc272d;
+    --quaternary-color: #005d26;
+    --quintenary-color: #6c0061;
+    --septinary-color: #eeda25;
+}
+
+
 body {
     overflow-x: hidden;
     position: relative;
