@@ -65,7 +65,7 @@
         "product_list": [
           "clocks-t-shirt",
           "striped-button-up",
-          "easter-sunday-hay-lila-corduroy"
+          "item-1"
         ],
         "collection": "merch",
         "cta_label": "Shop All Good Times"
@@ -98,10 +98,9 @@
             "image": "shopify:\/\/shop_images\/unnamed-2.jpg"
           }
         },
-        "c1b1f68d-bd9e-482a-8f1b-7daefe9777d8": {
+        "bf4dbb08-d71a-4432-b2db-82e70f16058a": {
           "type": "slideshow_slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Vector_Smart_Object.png"
           }
         }
       },
@@ -110,7 +109,7 @@
         "a498d71e-5b12-445c-b949-ea953820e4d1",
         "1dfbd0af-fba5-486d-9993-524b15164bd4",
         "b59f8518-44c8-4f11-874d-09402d1ab9a1",
-        "c1b1f68d-bd9e-482a-8f1b-7daefe9777d8"
+        "bf4dbb08-d71a-4432-b2db-82e70f16058a"
       ],
       "settings": {
         "name": ""
