@@ -35,6 +35,13 @@
     }
 }
 
+.color-good-times__hat path {
+    transition: fill .2s ease-in-out;
+}
+
+.color-good-times__hat path:hover {
+    cursor: pointer;
+}
 
 .color-good-times__headline {
     text-transform: uppercase;
@@ -50,10 +57,27 @@
 
 @media screen and (min-width: 990px) {
     .color-good-times__headline {
-        margin-bottom: 2.25rem;
-        font-size: 5.5rem;
+        margin-bottom: 3rem;
+        font-size: 6rem;
         max-width: 30rem;
     }
+}
+
+.color-good-times__swatches legend {
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.current-color-swatch {
+    width: 3rem;
+    height: 1.5rem;
+    border-radius: 8px;
+    display: block;
+    margin-left: 1rem;
 }
 
 .color-good-times fieldset {
@@ -84,23 +108,29 @@
 
 .color-good-times input {
     opacity: 0;
+    position: absolute;
+}
+
+.color-good-times input:checked+label {
+    border-color: black;
 }
 
 .color-good-times-option label {
     position: relative;
     border-radius: 100%;
-    height: 4rem;
-    width: 4rem;
+    height: 4.25rem;
+    width: 4.25rem;
     display: flex;
     justify-content: center;
-    border: 1px solid gray;
+    border: 3px solid gray;
+    background-color: var(--primary-color);
 }
 
 
 .color-good-times-option label .color {
-    width: 80%;
+    width: 75%;
     position: absolute;
-    height: 80%;
+    height: 75%;
     border-radius: 100%;
     bottom: 0;
     right: 0;
@@ -121,12 +151,11 @@
     right: 0;
     top: 0;
     left: 0;
-    border: 2px solid black;
     opacity: 0;
 }
 
-.color-good-times-option label:hover .ring {
-    opacity: 1;
+.color-good-times-option label:hover {
+    border-color: black;
 }
 
 .color-good-times-option label:hover {

@@ -16,29 +16,29 @@
     }
 
     colorButtons() {
-      console.log(this);
 
-      function changeMaterialColor(pHex, pTarget, pContainer) {
-        console.log(pTarget);
+      let activeColor = '';
 
-        if(pTarget == 'material') {
-          pContainer.querySelectorAll('.st0').forEach((elem)=> {
-            elem.style.fill = pHex; 
-          }); 
-        } else {
-          pContainer.querySelectorAll('.st5').forEach((elem)=> {
-            elem.style.fill = pHex; 
-          });       
-        }
-
+      function changeSelectedColor(pHex, pTarget, pContainer) {
+       activeColor = pHex;
+       console.log(pContainer);
+       pContainer.querySelector('[data-current-swatch]').style.backgroundColor = activeColor;
       }
 
-      this.querySelectorAll('[data-hat-color]').forEach((elem) => {
+      function colorMe() {
+        this.style.fill = activeColor; 
+      }
+
+      this.querySelectorAll('[data-color-option]').forEach((elem) => {
         elem.addEventListener('click', (event) => {
-          console.log(event.currentTarget.value);
-          changeMaterialColor(event.currentTarget.value, event.currentTarget.dataset.colorTarget,this); 
+          changeSelectedColor(event.currentTarget.value, event.currentTarget.dataset.colorTarget,this); 
         }); 
       })
-    }
+
+     
+      this.querySelectorAll('path' ).forEach((elem)=> {
+        elem.addEventListener('click',colorMe); 
+      })
+    }; 
 
 }); 

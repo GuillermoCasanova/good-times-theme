@@ -1206,66 +1206,42 @@
         </div>
 
         <div>
+            <div class="color-good-times_inner">
+                <h2 class="color-good-times__headline">
+                    {{ section.settings.headline }}
+                </h2>
 
-            <h2 class="color-good-times__headline">
-                {{ section.settings.headline }}
-            </h2>
+                <fieldset  class="color-good-times__swatches"  >
+                    <legend>
+                        Current Color:
+                        {% for block in section.blocks %}
+                            {% if forloop.first %}
+                            <span data-current-swatch style="background-color={{ block.settings.hex }};"
+                                class="current-color-swatch"></span> 
+                            {% endif %}
+                        {% endfor %}
+                    </legend>
 
-
-            <fieldset>
-                <legend>
-                    Logo Color 
-                </legend>
-
-                <div class="color-good-times-options">
-                    {% for block in section.blocks %}
-                        {% if block.settings.swatch_set == 'logo' %}
-                        <span class="color-good-times-option">
-                            <span class="ring">
-                                
-                            </span>
-                            <label for="color-{{ block.settings.hex }}"  style="background-color: {{ block.settings.hex }};">
-                            
-                                <span class="label-text">
-                                    {{ block.settings.hex }}
-                            </span>
-                            </label>
-                            <input id="color-{{ block.settings.hex }}"  type="radio" value="{{ block.settings.hex }}" name="logo-color" data-hat-color data-color-target="logo">
-                        </span>
-                        {% endif %}
-
-                    {% endfor %}
-                </div>
-
-            </fieldset>
-
-            <fieldset>
-                <legend>
-                    Thread Color 
-                </legend>
                     <div class="color-good-times-options">
                         {% for block in section.blocks %}
-                        {% if block.settings.swatch_set == 'material' %}
-                        <span  class="color-good-times-option">
-                        
-                            <label for="color-{{ block.settings.hex }}">
-                                <span class="label-text">
-                                    {{ block.settings.hex }}
-                                </span>
-
-                                <span class="ring">
-                                
-                                </span>
-
-                                <span class="color"  style="background-color: {{ block.settings.hex }};">
-                                </span>
-                            </label>
-                            <input id="color-{{ block.settings.hex }}"  type="radio" value="{{ block.settings.hex }}" name="logo-color" data-hat-color data-color-target="material">
-                        </span>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-            </fieldset>
+                            <span class="color-good-times-option">
+                                <input id="color-{{ block.settings.hex }}"  type="radio" value="{{ block.settings.hex }}" name="logo-color" data-color-option>
+                                <label for="color-{{ block.settings.hex }}"  >
+                                    <span class="label-text">
+                                        {{ block.settings.hex }}
+                                    </span>
+                                    <span class="ring">
+                                        
+                                    </span>
+                                    <span class="color" style="background-color: {{ block.settings.hex }};">
+                                            
+                                    </span>
+                                </label>
+                            </span>
+                        {% endfor %}
+                    </div>
+                </fieldset>
+            </div>
         </div>
     </div>
 
