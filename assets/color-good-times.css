@@ -22,10 +22,11 @@
     }
 }
 
+/* 
 .color-good-times__inner>div {
     justify-self: flex-start;
     width: 100%;
-}
+} */
 
 .color-good-times__hat-container {
     width: 100%;
@@ -53,9 +54,39 @@
 }
 
 
-.color-good-times__copy {
-    padding-top: 2.25rem;
+.color-good-times__copy {}
+
+.color-good-times {
+    position: relative;
 }
+
+.color-good-times__bg-logo {
+    position: absolute;
+    z-index: -1;
+    top: -2rem;
+    width: 100%;
+    right: 0;
+    left: 0;
+}
+
+@media screen and (min-width: 975px) {
+    .color-good-times__bg-logo {
+        position: absolute;
+        z-index: -1;
+        top: -6rem;
+        width: 100%;
+        left: 6rem;
+        left: auto;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .color-good-times__bg-logo {
+        width: 90%;
+    }
+}
+
+
 
 .color-good-times__headline {
     text-transform: uppercase;
@@ -72,7 +103,7 @@
 @media screen and (min-width: 990px) {
     .color-good-times__headline {
         margin-bottom: 3rem;
-        font-size: 5.5rem;
+        font-size: 5rem;
         max-width: 30rem;
     }
 }
