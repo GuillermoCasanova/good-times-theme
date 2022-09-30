@@ -150,6 +150,13 @@
             "title": "Orange",
             "hex": "#ed8d06"
           }
+        },
+        "e37f7a54-df2a-455f-91a8-294f4b00e42c": {
+          "type": "color-option",
+          "settings": {
+            "title": "Sail",
+            "hex": "#fdfdee"
+          }
         }
       },
       "block_order": [
@@ -163,7 +170,8 @@
         "b937c822-d79d-49ec-a089-21c33079583b",
         "97583c2f-9215-4276-a733-8c0e1d00c051",
         "916a13ae-5219-4dbc-8b4b-8074989cf787",
-        "c6cb0090-054e-4b02-aa45-c08036219ed6"
+        "c6cb0090-054e-4b02-aa45-c08036219ed6",
+        "e37f7a54-df2a-455f-91a8-294f4b00e42c"
       ],
       "settings": {
         "headline": "Color Your Good Times"
