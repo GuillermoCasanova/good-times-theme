@@ -101,13 +101,21 @@
             "hex": "#1878b9",
             "swatch_set": "material"
           }
+        },
+        "c874946f-8dee-4030-aed0-a539cea6e1ea": {
+          "type": "color-option",
+          "settings": {
+            "hex": "",
+            "swatch_set": "logo"
+          }
         }
       },
       "block_order": [
         "9f054c00-ece3-44e3-9986-6be1d39c1b68",
         "8eeade1a-1ffe-463c-a86c-88c17263f557",
         "b13dca65-220d-4f7e-9ad6-3be67c73c2bd",
-        "68612405-8862-47f7-8dd5-bb96ea458c12"
+        "68612405-8862-47f7-8dd5-bb96ea458c12",
+        "c874946f-8dee-4030-aed0-a539cea6e1ea"
       ],
       "settings": {
         "headline": "Color Your Good Times"
