@@ -3,7 +3,7 @@
 
 .color-good-times__inner {
     padding-top: 8rem;
-    max-width: 100rem;
+    max-width: 92rem;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 6rem;
@@ -12,13 +12,23 @@
     padding-left: 2rem;
     padding-right: 2rem;
     grid-template-columns: 1fr;
+    align-content: space-around;
 }
 
 
 @media screen and (min-width: 975px) {
     .color-good-times__inner {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1.25fr 1fr;
     }
+}
+
+.color-good-times__inner>div {
+    justify-self: flex-start;
+    width: 100%;
+}
+
+.color-good-times__hat-container {
+    width: 100%;
 }
 
 .color-good-times__hat {
@@ -30,17 +40,21 @@
 
 @media screen and (min-width: 975px) {
     .color-good-times__hat {
-        max-width: 40rem;
         grid-template-columns: 1fr 1fr;
     }
 }
 
 .color-good-times__hat .color-area {
-    transition: fill .2s ease-in-out;
+    transition: fill .3s var(--easing-1);
 }
 
 .color-good-times__hat .color-area:hover {
     cursor: pointer;
+}
+
+
+.color-good-times__copy {
+    padding-top: 2.25rem;
 }
 
 .color-good-times__headline {
@@ -50,7 +64,7 @@
     text-shadow: var(--headline-shadow);
     color: var(--primary-color);
     margin-top: 0;
-    max-width: 34rem;
+    max-width: 26rem;
     margin-bottom: 1.5rem;
 }
 
@@ -58,13 +72,13 @@
 @media screen and (min-width: 990px) {
     .color-good-times__headline {
         margin-bottom: 3rem;
-        font-size: 6rem;
+        font-size: 5.5rem;
         max-width: 30rem;
     }
 }
 
 .color-good-times__swatches legend {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 1.2rem;
@@ -73,11 +87,12 @@
 }
 
 .current-color-swatch {
-    width: 3rem;
-    height: 1.5rem;
+    width: 4rem;
+    height: 2rem;
     border-radius: 8px;
     display: block;
     margin-left: 1rem;
+    border: 2px solid black;
 }
 
 .color-good-times fieldset {
@@ -97,13 +112,24 @@
 
 
 .color-good-times-options {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 4rem);
+    justify-content: space-between;
+    grid-column-gap: 2rem;
+}
+
+
+@media screen and (min-width: 975px) {
+    .color-good-times-options {
+        max-width: 28rem;
+    }
 }
 
 .color-good-times-option {
-    border-radius: 100%;
+    border-radius: 8px;
     position: relative;
     margin-right: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .color-good-times input {
@@ -115,28 +141,37 @@
     border-color: black;
 }
 
+.color-good-times input:checked+label .color {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 10px rgba(27, 27, 27, 0.48));
+}
+
+
 .color-good-times-option label {
     position: relative;
-    border-radius: 100%;
-    height: 4.25rem;
-    width: 4.25rem;
+    border-radius: 8px;
+    /* height: 2.3rem;
+    width: 5.3rem; */
+    height: 5rem;
+    width: 5rem;
     display: flex;
     justify-content: center;
-    border: 3px solid gray;
-    background-color: var(--primary-color);
+    /* transform: rotate(10deg); */
 }
 
 
 .color-good-times-option label .color {
-    width: 75%;
+    width: 100%;
     position: absolute;
-    height: 75%;
-    border-radius: 100%;
+    height: 100%;
     bottom: 0;
     right: 0;
     top: 0;
     left: 0;
     margin: auto;
+    border-radius: 6px;
+    transition: all var(--duration-short) var(--easing-1);
 }
 
 .color-good-times-option .ring {
@@ -155,12 +190,20 @@
 }
 
 .color-good-times-option label:hover {
-    border-color: black;
+    /* border: 3px solid black; */
 }
+
+.color-good-times-option label:hover .color {
+    /* stroke-width: 10px;
+    stroke: black; */
+    /* width: 30%;
+    height: 30%; */
+    transform: scale(1.1);
+}
+
 
 .color-good-times-option label:hover {
     cursor: pointer;
-
 }
 
 .label-text {
