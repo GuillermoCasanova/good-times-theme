@@ -1,0 +1,140 @@
+.color-good-times {}
+
+
+.color-good-times__inner {
+    padding-top: 8rem;
+    max-width: 100rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 6rem;
+    display: grid;
+    column-gap: 6rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    grid-template-columns: 1fr;
+}
+
+
+@media screen and (min-width: 975px) {
+    .color-good-times__inner {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.color-good-times__hat {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+@media screen and (min-width: 975px) {
+    .color-good-times__hat {
+        max-width: 40rem;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+.color-good-times__headline {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    line-height: 1.25;
+    text-shadow: var(--headline-shadow);
+    color: var(--primary-color);
+    margin-top: 0;
+    max-width: 34rem;
+    margin-bottom: 1.5rem;
+}
+
+
+@media screen and (min-width: 990px) {
+    .color-good-times__headline {
+        margin-bottom: 2.25rem;
+        font-size: 5.5rem;
+        max-width: 30rem;
+    }
+}
+
+.color-good-times fieldset {
+    border: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.color-good-times__thumbs {
+    list-style: none;
+    padding-left: 0;
+}
+
+.color-good-times__thumb {
+    max-width: 30%;
+}
+
+
+.color-good-times-options {
+    display: flex;
+}
+
+.color-good-times-option {
+    border-radius: 100%;
+    position: relative;
+    margin-right: 1.5rem;
+}
+
+.color-good-times input {
+    opacity: 0;
+}
+
+.color-good-times-option label {
+    position: relative;
+    border-radius: 100%;
+    height: 4rem;
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    border: 1px solid gray;
+}
+
+
+.color-good-times-option label .color {
+    width: 80%;
+    position: absolute;
+    height: 80%;
+    border-radius: 100%;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    left: 0;
+    margin: auto;
+}
+
+.color-good-times-option .ring {
+    width: 100%;
+    height: 100%;
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    background-color: transparent;
+    border-radius: 100%;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    left: 0;
+    border: 2px solid black;
+    opacity: 0;
+}
+
+.color-good-times-option label:hover .ring {
+    opacity: 1;
+}
+
+.color-good-times-option label:hover {
+    cursor: pointer;
+
+}
+
+.label-text {
+    opacity: 0;
+    position: absolute;
+}
