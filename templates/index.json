@@ -129,6 +129,13 @@
             "title": "White",
             "hex": "#ffffff"
           }
+        },
+        "97583c2f-9215-4276-a733-8c0e1d00c051": {
+          "type": "color-option",
+          "settings": {
+            "title": "Green",
+            "hex": "#0c9614"
+          }
         }
       },
       "block_order": [
@@ -139,7 +146,8 @@
         "c874946f-8dee-4030-aed0-a539cea6e1ea",
         "87d01a01-96fe-4a17-9b51-920f3d99f8f8",
         "f0ca2521-8d36-4fb2-a56a-561829b7ee44",
-        "b937c822-d79d-49ec-a089-21c33079583b"
+        "b937c822-d79d-49ec-a089-21c33079583b",
+        "97583c2f-9215-4276-a733-8c0e1d00c051"
       ],
       "settings": {
         "headline": "Color Your Good Times"
