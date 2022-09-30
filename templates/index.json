@@ -115,6 +115,13 @@
             "title": "pink",
             "hex": "#f700dc"
           }
+        },
+        "f0ca2521-8d36-4fb2-a56a-561829b7ee44": {
+          "type": "color-option",
+          "settings": {
+            "title": "Purple",
+            "hex": "#aa13ea"
+          }
         }
       },
       "block_order": [
@@ -123,7 +130,8 @@
         "b13dca65-220d-4f7e-9ad6-3be67c73c2bd",
         "68612405-8862-47f7-8dd5-bb96ea458c12",
         "c874946f-8dee-4030-aed0-a539cea6e1ea",
-        "87d01a01-96fe-4a17-9b51-920f3d99f8f8"
+        "87d01a01-96fe-4a17-9b51-920f3d99f8f8",
+        "f0ca2521-8d36-4fb2-a56a-561829b7ee44"
       ],
       "settings": {
         "headline": "Color Your Good Times"
