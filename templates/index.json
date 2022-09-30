@@ -198,6 +198,48 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "166455305179917314": {
+      "type": "coloring-book",
+      "blocks": {
+        "9f054c00-ece3-44e3-9986-6be1d39c1b68": {
+          "type": "color-option",
+          "settings": {
+            "hex": "#dd3d3d",
+            "swatch_set": "logo"
+          }
+        },
+        "8eeade1a-1ffe-463c-a86c-88c17263f557": {
+          "type": "color-option",
+          "settings": {
+            "hex": "#dad831",
+            "swatch_set": "logo"
+          }
+        },
+        "b13dca65-220d-4f7e-9ad6-3be67c73c2bd": {
+          "type": "color-option",
+          "settings": {
+            "hex": "#3cb1ca",
+            "swatch_set": "material"
+          }
+        },
+        "68612405-8862-47f7-8dd5-bb96ea458c12": {
+          "type": "color-option",
+          "settings": {
+            "hex": "#1878b9",
+            "swatch_set": "material"
+          }
+        }
+      },
+      "block_order": [
+        "9f054c00-ece3-44e3-9986-6be1d39c1b68",
+        "8eeade1a-1ffe-463c-a86c-88c17263f557",
+        "b13dca65-220d-4f7e-9ad6-3be67c73c2bd",
+        "68612405-8862-47f7-8dd5-bb96ea458c12"
+      ],
+      "settings": {
+        "headline": "Color Your Good Times"
+      }
     }
   },
   "order": [
@@ -207,6 +249,7 @@
     "16560868213dc9eca6",
     "1657649281278140f0",
     "1657649331bb84bf19",
-    "1657649318d3a43177"
+    "1657649318d3a43177",
+    "166455305179917314"
   ]
 }
