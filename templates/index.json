@@ -157,6 +157,13 @@
             "title": "Sail",
             "hex": "#fdfdee"
           }
+        },
+        "4fa740d7-313c-4b8d-9cef-6b7c1ee2e3f9": {
+          "type": "color-option",
+          "settings": {
+            "title": "Brown",
+            "hex": "#8f6534"
+          }
         }
       },
       "block_order": [
@@ -171,7 +178,8 @@
         "97583c2f-9215-4276-a733-8c0e1d00c051",
         "916a13ae-5219-4dbc-8b4b-8074989cf787",
         "c6cb0090-054e-4b02-aa45-c08036219ed6",
-        "e37f7a54-df2a-455f-91a8-294f4b00e42c"
+        "e37f7a54-df2a-455f-91a8-294f4b00e42c",
+        "4fa740d7-313c-4b8d-9cef-6b7c1ee2e3f9"
       ],
       "settings": {
         "headline": "Color Your Good Times"
