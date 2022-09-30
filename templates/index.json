@@ -221,34 +221,6 @@
         "padding_bottom": 36
       }
     },
-    "1657649318d3a43177": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "{{ section.settings.collection.title }}",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "shoes",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": false,
-        "show_vendor": true,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "order_desktop": "right",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "166455514382681dcb": {
       "type": "featured-collection",
       "settings": {
@@ -286,7 +258,6 @@
     "16560868213dc9eca6",
     "1657649281278140f0",
     "1657649331bb84bf19",
-    "1657649318d3a43177",
     "166455514382681dcb"
   ]
 }
