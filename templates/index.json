@@ -74,13 +74,6 @@
     "166455305179917314": {
       "type": "coloring-book",
       "blocks": {
-        "8eeade1a-1ffe-463c-a86c-88c17263f557": {
-          "type": "color-option",
-          "settings": {
-            "title": "Yellow",
-            "hex": "#dad831"
-          }
-        },
         "b13dca65-220d-4f7e-9ad6-3be67c73c2bd": {
           "type": "color-option",
           "settings": {
@@ -93,6 +86,27 @@
           "settings": {
             "title": "Blue",
             "hex": "#105bd9"
+          }
+        },
+        "97583c2f-9215-4276-a733-8c0e1d00c051": {
+          "type": "color-option",
+          "settings": {
+            "title": "Green",
+            "hex": "#0c9614"
+          }
+        },
+        "8eeade1a-1ffe-463c-a86c-88c17263f557": {
+          "type": "color-option",
+          "settings": {
+            "title": "Yellow",
+            "hex": "#dad831"
+          }
+        },
+        "c6cb0090-054e-4b02-aa45-c08036219ed6": {
+          "type": "color-option",
+          "settings": {
+            "title": "Orange",
+            "hex": "#ed8d06"
           }
         },
         "c874946f-8dee-4030-aed0-a539cea6e1ea": {
@@ -116,18 +130,11 @@
             "hex": "#aa13ea"
           }
         },
-        "97583c2f-9215-4276-a733-8c0e1d00c051": {
+        "e37f7a54-df2a-455f-91a8-294f4b00e42c": {
           "type": "color-option",
           "settings": {
-            "title": "Green",
-            "hex": "#0c9614"
-          }
-        },
-        "c6cb0090-054e-4b02-aa45-c08036219ed6": {
-          "type": "color-option",
-          "settings": {
-            "title": "Orange",
-            "hex": "#ed8d06"
+            "title": "Sail",
+            "hex": "#fdfdee"
           }
         },
         "4fa740d7-313c-4b8d-9cef-6b7c1ee2e3f9": {
@@ -135,13 +142,6 @@
           "settings": {
             "title": "Brown",
             "hex": "#8f6534"
-          }
-        },
-        "e37f7a54-df2a-455f-91a8-294f4b00e42c": {
-          "type": "color-option",
-          "settings": {
-            "title": "Sail",
-            "hex": "#fdfdee"
           }
         },
         "b937c822-d79d-49ec-a089-21c33079583b": {
@@ -160,16 +160,16 @@
         }
       },
       "block_order": [
-        "8eeade1a-1ffe-463c-a86c-88c17263f557",
         "b13dca65-220d-4f7e-9ad6-3be67c73c2bd",
         "68612405-8862-47f7-8dd5-bb96ea458c12",
+        "97583c2f-9215-4276-a733-8c0e1d00c051",
+        "8eeade1a-1ffe-463c-a86c-88c17263f557",
+        "c6cb0090-054e-4b02-aa45-c08036219ed6",
         "c874946f-8dee-4030-aed0-a539cea6e1ea",
         "87d01a01-96fe-4a17-9b51-920f3d99f8f8",
         "f0ca2521-8d36-4fb2-a56a-561829b7ee44",
-        "97583c2f-9215-4276-a733-8c0e1d00c051",
-        "c6cb0090-054e-4b02-aa45-c08036219ed6",
-        "4fa740d7-313c-4b8d-9cef-6b7c1ee2e3f9",
         "e37f7a54-df2a-455f-91a8-294f4b00e42c",
+        "4fa740d7-313c-4b8d-9cef-6b7c1ee2e3f9",
         "b937c822-d79d-49ec-a089-21c33079583b",
         "916a13ae-5219-4dbc-8b4b-8074989cf787"
       ],
