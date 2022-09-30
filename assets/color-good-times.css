@@ -35,11 +35,11 @@
     }
 }
 
-.color-good-times__hat path {
+.color-good-times__hat .color-area {
     transition: fill .2s ease-in-out;
 }
 
-.color-good-times__hat path:hover {
+.color-good-times__hat .color-area:hover {
     cursor: pointer;
 }
 

@@ -17,7 +17,7 @@
 
     colorButtons() {
 
-      let activeColor = '';
+      let activeColor = this.querySelector('[data-current-swatch]').dataset.currentSwatch || '#fff';
 
       function changeSelectedColor(pHex, pTarget, pContainer) {
        activeColor = pHex;
@@ -36,7 +36,7 @@
       })
 
      
-      this.querySelectorAll('path' ).forEach((elem)=> {
+      this.querySelectorAll('.color-area' ).forEach((elem)=> {
         elem.addEventListener('click',colorMe); 
       })
     }; 
