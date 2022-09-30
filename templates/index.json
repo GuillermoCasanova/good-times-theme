@@ -74,13 +74,6 @@
     "166455305179917314": {
       "type": "coloring-book",
       "blocks": {
-        "9f054c00-ece3-44e3-9986-6be1d39c1b68": {
-          "type": "color-option",
-          "settings": {
-            "title": "Red",
-            "hex": "#dd3d3d"
-          }
-        },
         "8eeade1a-1ffe-463c-a86c-88c17263f557": {
           "type": "color-option",
           "settings": {
@@ -123,25 +116,11 @@
             "hex": "#aa13ea"
           }
         },
-        "b937c822-d79d-49ec-a089-21c33079583b": {
-          "type": "color-option",
-          "settings": {
-            "title": "White",
-            "hex": "#ffffff"
-          }
-        },
         "97583c2f-9215-4276-a733-8c0e1d00c051": {
           "type": "color-option",
           "settings": {
             "title": "Green",
             "hex": "#0c9614"
-          }
-        },
-        "916a13ae-5219-4dbc-8b4b-8074989cf787": {
-          "type": "color-option",
-          "settings": {
-            "title": "Black",
-            "hex": "#282626"
           }
         },
         "c6cb0090-054e-4b02-aa45-c08036219ed6": {
@@ -151,6 +130,13 @@
             "hex": "#ed8d06"
           }
         },
+        "4fa740d7-313c-4b8d-9cef-6b7c1ee2e3f9": {
+          "type": "color-option",
+          "settings": {
+            "title": "Brown",
+            "hex": "#8f6534"
+          }
+        },
         "e37f7a54-df2a-455f-91a8-294f4b00e42c": {
           "type": "color-option",
           "settings": {
@@ -158,28 +144,34 @@
             "hex": "#fdfdee"
           }
         },
-        "4fa740d7-313c-4b8d-9cef-6b7c1ee2e3f9": {
+        "b937c822-d79d-49ec-a089-21c33079583b": {
           "type": "color-option",
           "settings": {
-            "title": "Brown",
-            "hex": "#8f6534"
+            "title": "White",
+            "hex": "#ffffff"
+          }
+        },
+        "916a13ae-5219-4dbc-8b4b-8074989cf787": {
+          "type": "color-option",
+          "settings": {
+            "title": "Black",
+            "hex": "#282626"
           }
         }
       },
       "block_order": [
-        "9f054c00-ece3-44e3-9986-6be1d39c1b68",
         "8eeade1a-1ffe-463c-a86c-88c17263f557",
         "b13dca65-220d-4f7e-9ad6-3be67c73c2bd",
         "68612405-8862-47f7-8dd5-bb96ea458c12",
         "c874946f-8dee-4030-aed0-a539cea6e1ea",
         "87d01a01-96fe-4a17-9b51-920f3d99f8f8",
         "f0ca2521-8d36-4fb2-a56a-561829b7ee44",
-        "b937c822-d79d-49ec-a089-21c33079583b",
         "97583c2f-9215-4276-a733-8c0e1d00c051",
-        "916a13ae-5219-4dbc-8b4b-8074989cf787",
         "c6cb0090-054e-4b02-aa45-c08036219ed6",
+        "4fa740d7-313c-4b8d-9cef-6b7c1ee2e3f9",
         "e37f7a54-df2a-455f-91a8-294f4b00e42c",
-        "4fa740d7-313c-4b8d-9cef-6b7c1ee2e3f9"
+        "b937c822-d79d-49ec-a089-21c33079583b",
+        "916a13ae-5219-4dbc-8b4b-8074989cf787"
       ],
       "settings": {
         "headline": "Color Your Good Times"
