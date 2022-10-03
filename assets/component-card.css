@@ -395,6 +395,7 @@
   opacity: 1;
   -webkit-mask-position: 100%;
   transform: rotate(8deg);
+  pointer-events: none;
 }
 
 .card--square-media .hover-stroke {
