@@ -26,6 +26,7 @@ body {
 .site-wrapper {
     position: relative;
     width: 100%;
+    overflow-x: hidden;
 }
 
 .isolate,

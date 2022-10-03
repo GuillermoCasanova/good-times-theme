@@ -235,7 +235,6 @@
         border-radius: 100%;
         background-color: red;
         border: 2px solid white;
-        color: --primary-color;
         font-family: var(--font-heading-family);
         text-transform: uppercase;
         color: var(--primary-color);
@@ -250,6 +249,7 @@
         top: 0;
         left: 0;
         z-index: 1;
+        opacity: 0;
         transition: opacity .2s ease-in-out;
     }
 

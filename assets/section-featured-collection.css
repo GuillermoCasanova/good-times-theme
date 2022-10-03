@@ -59,12 +59,23 @@
         margin-right: auto;
         margin-left: 0;
     }
-}
 
-
-@media screen and (min-width: 990px) {
     .featured-collection.featured-collection--reverse .featured-collection__info {
         padding-left: 3rem;
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    .featured-collection.featured-collection--reverse .featured-collection__info-wrapper:after {
+        left: -30rem;
+        right: auto;
+        background: linear-gradient(90deg, rgb(241, 237, 225) 80%, rgba(241, 237, 225, 0) 100%);
+        width: 183%;
+    }
+
+    .featured-collection__info-wrapper:after {
+        right: -34rem;
+        width: 183%;
     }
 }
 
