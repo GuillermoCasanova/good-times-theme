@@ -1,31 +1,31 @@
 {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
-{{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
+{{ 'component-collection-header.css' | asset_url | stylesheet_tag }}
 {{ 'section-marquee.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   @media screen and (max-width: 749px) {
-    .collection-hero--with-image .collection-hero__inner {
+    .collection-header--with-image .collection-header__inner {
       padding-bottom: calc({{ settings.media_shadow_vertical_offset | at_least: 0 }}px + 2rem);
     }
   }
 {%- endstyle -%}
 
 
-<div class="collection-hero  {% if section.settings['header_style'] == 'drops' %}collection-hero--drops{% endif %}">
-  <div class="collection-hero__inner page-width">
-    <div class="collection-hero__text-wrapper">
-      <h1 class="collection-hero__title">
+<div class="collection-header  {% if section.settings['header_style'] == 'drops' %}collection-header--drops{% endif %}">
+  <div class="collection-header__inner page-width">
+    <div class="collection-header__text-wrapper">
+      <h1 class="collection-header__title">
         <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
         {{- collection.title | escape -}}
       </h1>
 
       {%- if section.settings.show_collection_description -%}
-        <div class="collection-hero__description rte">{{ collection.description }}</div>
+        <div class="collection-header__description rte">{{ collection.description }}</div>
       {%- endif -%}
     </div>
 
     {%- if section.settings.show_collection_image and collection.image -%}
-      <div class="collection-hero__image-container media gradient">
+      <div class="collection-header__image-container media gradient">
         <img
           srcset="{%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
             {%- if collection.image.width >= 360 -%}{{ collection.image | image_url: width: 360 }} 360w,{%- endif -%}
@@ -44,7 +44,7 @@
     {%- endif -%}
   </div>
 
-  <div class="collection-hero__marquee">
+  <div class="collection-header__marquee">
 
     {% if  section.settings.header_style == 'drops' %}
       {% assign collection_type = 'Drops' %}

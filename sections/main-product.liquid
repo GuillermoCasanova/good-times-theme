@@ -7,7 +7,6 @@
   {{ 'component-rating.css' | asset_url | stylesheet_tag }}
   {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
   {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
-  {{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
   {{ 'section-marquee.css' | asset_url | stylesheet_tag }}
   
   
@@ -36,14 +35,13 @@
 
 
 
-<div class="collection-hero__marquee" aria-hidden="true" role="presentation">
-
-  {% if  'drops' == 'drops' %}
-    {% assign collection_type = 'Drops' %}
-  {%else%}
+  {% if  product.vendor == 'Good Times' %}
     {% assign collection_type = 'Good Times' %}
+  {%else%}
+    {% assign collection_type = 'drops' %}
   {% endif %}
 
+<div class="product-header {%if collection_type == 'drops'%}product-header--drops{%endif%}" aria-hidden="true" role="presentation">
   <div class="section-marquee" aria-hidden="true" role="presentation">
     <div class="section-marquee__scroll-container">
       <span>
@@ -102,6 +100,7 @@
       </span>
     </div>
   </div>
+  
 </div>
 
   <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.gallery_layout }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-desktop{% else %}product--no-media{% endif %}">
@@ -282,9 +281,9 @@
           {%- when 'text' -%}
             <p class="product__text{% if block.settings.text_style == 'uppercase' %} 
                 caption-with-letter-spacing
-                {% elsif block.settings.text_style == 'vendor' %} product__vendor
+                {% elsif block.settings.text_style == 'vendor_tag' %} product__vendor
                 {% elsif block.settings.text_style == 'subtitle' %} subtitle
-              {% endif %}" {{ block.shopify_attributes }}>
+              {% endif %}{% if product.vendor != 'Good Times' %}product__vendor--drops{% endif %}" {{ block.shopify_attributes }}>
               {{- block.settings.text -}}
             </p>
           {%- when 'title' -%}
