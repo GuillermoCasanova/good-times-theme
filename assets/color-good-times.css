@@ -4,10 +4,10 @@
 
 
 .color-good-times__inner {
-    padding-top: 5rem;
+    padding-top: 3rem;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 1.5rem;
+    padding-bottom: 0;
     column-gap: 6rem;
     display: flex;
     flex-direction: column;
