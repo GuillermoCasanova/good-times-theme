@@ -31,8 +31,7 @@
         },
         "139f3a77-e337-4028-a266-aa2eae3ba160": {
           "type": "description",
-          "settings": {
-          }
+          "settings": {}
         },
         "1655928536e57487d0-4": {
           "type": "variant_picker",
@@ -100,8 +99,7 @@
         },
         "bf4dbb08-d71a-4432-b2db-82e70f16058a": {
           "type": "slideshow_slide",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -116,7 +114,7 @@
       }
     },
     "166455305179917314": {
-      "type": "coloring-book",
+      "type": "color-good-times",
       "blocks": {
         "b13dca65-220d-4f7e-9ad6-3be67c73c2bd": {
           "type": "color-option",

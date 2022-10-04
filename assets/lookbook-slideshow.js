@@ -43,8 +43,6 @@ class LookbookSlideshow extends HTMLElement {
 
             mousePos.x = event.clientX - 50; 
             mousePos.y = event.clientY - 50; 
-            console.log(mousePos.x);
-            console.log(mousePos.y);
 
             dragCursor.style.opacity = 1; 
             dragCursor.style.top = mousePos.y + "px"; 

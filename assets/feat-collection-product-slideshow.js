@@ -44,7 +44,8 @@ class FeatCollectionProductSlideshow extends HTMLElement {
             },
             controller: {
                 control: this.slideshow
-            }, breakpoints: {
+            }, 
+            breakpoints: {
                 600: {
                     slidesPerView: 2
                 },  990: {
