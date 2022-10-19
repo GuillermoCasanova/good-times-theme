@@ -123,12 +123,6 @@ body {
 }
 
 
-/*WIDESCREEN-UP*/
-@media screen and (min-width: 2000px) {
-    :root {
-        font-size: 1.05rem;
-    }
-}
 
 
 .button {
