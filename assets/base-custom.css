@@ -9,6 +9,7 @@
     --quaternary-color: #005d26;
     --quintenary-color: #6c0061;
     --septinary-color: #eeda25;
+    --background-color: rgb(255 251 235);
     --easing-1: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -18,9 +19,13 @@ body {
     position: relative;
 }
 
+main {
+    min-height: 70vmin;
+}
 
 body {
-    background-color: rgb(241, 237, 225) !important;
+    /* background-color: rgb(241, 237, 225) !important; */
+    background-color: var(--background-color) !important
 }
 
 .site-wrapper {
@@ -48,47 +53,6 @@ body {
 /* svg {
     width: 100%;
 } */
-
-.website-texture {
-    z-index: 100;
-    mix-blend-mode: multiply;
-    width: 100%;
-    position: relative;
-    mix-blend-mode: multiply;
-}
-
-.paper-texture-pattern-folds {
-    mix-blend-mode: lighten;
-    background-repeat: repeat-y;
-    object-fit: cover;
-    z-index: 104;
-    opacity: .35;
-    background-position: center;
-    position: absolute;
-}
-
-
-.paper-texture-pattern-0 {
-    z-index: 100;
-    opacity: .7;
-    mix-blend-mode: multiply;
-    background-repeat: repeat-y;
-    background-size: cover;
-}
-
-.paper-texture-pattern-1 {
-    mix-blend-mode: screen;
-    z-index: 98;
-    opacity: .15;
-    background-repeat: repeat;
-}
-
-.paper-texture-pattern-2 {
-    mix-blend-mode: overlay;
-    z-index: 97;
-    opacity: .4;
-    background-repeat: repeat;
-}
 
 
 /*X-LARGE-UP*/
