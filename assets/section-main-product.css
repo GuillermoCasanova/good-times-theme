@@ -396,7 +396,7 @@ a.product__text {
 
 @media screen and (min-width: 990px) {
   .product__title>* {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 }
 
@@ -693,6 +693,7 @@ a.product__text {
 .product__media-item>* {
   display: block;
   position: relative;
+  border: none;
 }
 
 .product__media-toggle {
