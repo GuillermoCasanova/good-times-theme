@@ -119,17 +119,27 @@
       },
       "footer": {
         "type": "footer",
+        "blocks": {
+          "71ae28e5-f430-4ffa-8d50-10c2dfd1c68e": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Footer Menu",
+              "footer_menu": "footer"
+            }
+          },
+          "4d658f82-e72e-4ed3-b11a-79650d149bc9": {
+            "type": "social_links",
+            "settings": {
+              "social_links": "social-links"
+            }
+          }
+        },
+        "block_order": [
+          "71ae28e5-f430-4ffa-8d50-10c2dfd1c68e",
+          "4d658f82-e72e-4ed3-b11a-79650d149bc9"
+        ],
         "settings": {
-          "color_scheme": "background-1",
-          "newsletter_enable": false,
-          "newsletter_heading": "Subscribe to our emails",
-          "show_social": false,
-          "enable_country_selector": false,
-          "enable_language_selector": false,
-          "payment_enable": false,
-          "margin_top": 48,
-          "padding_top": 36,
-          "padding_bottom": 36
+          "copyright": ""
         }
       },
       "main-password-header": {
