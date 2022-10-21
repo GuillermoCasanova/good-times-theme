@@ -1,23 +1,20 @@
-footer {
-  padding-top: 4rem;
-}
-
-@media screen and (min-width: 990px) {
-  footer {
-    padding-top: 10rem;
-  }
-}
-
 .footer__inner {
+  padding-top: 4rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  max-width: var(--page-width);
+  margin-right: auto;
+  margin-left: auto;
 }
 
 @media screen and (min-width: 990px) {
   .footer__inner {
+    padding-top: 7rem;
     display: flex;
     overflow: auto;
     justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 1.25rem;
   }
 }
 
@@ -31,9 +28,25 @@ footer {
   align-items: center
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 700px) {
   .footer__menu {
     flex-direction: row;
+    justify-content: space-around;
+    max-width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+
+@media screen and (min-width: 990px) {
+  .footer__menu {
+    flex-grow: 1;
+    max-width: 40rem;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-right: 3rem;
   }
 }
 
@@ -42,12 +55,34 @@ footer {
 .footer__menu--social {
   flex-direction: row;
   justify-content: space-around;
+  max-width: 39rem;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+
+@media screen and (min-width: 990px) {
+  .footer__menu--social {
+    flex-grow: 0;
+    margin-left: 0;
+  }
+}
+
+
+
 
 .footer__menu__item {
   margin-bottom: .75rem;
   display: inline-block;
 }
+
+
+@media screen and (min-width: 990px) {
+  .footer__menu__item {
+    margin-bottom: 0;
+  }
+}
+
 
 .footer__menu__link {
   display: flex;
@@ -64,6 +99,15 @@ footer {
   font-family: var(--font-heading-family);
   justify-content: center;
 }
+
+
+
+@media screen and (min-width: 990px) {
+  .footer__menu__link {
+    font-size: 1.25rem;
+  }
+}
+
 
 .footer__menu__link:not(.footer__menu__link--social):hover:after,
 .footer__menu__link:not(.footer__menu__link--social):focus:after,
@@ -84,6 +128,12 @@ footer {
   opacity: 0;
 }
 
+@media screen and (min-width: 990px) {
+  .footer__menu__link:not(.footer__menu__link--social):before {
+    top: .85rem;
+  }
+}
+
 
 .footer__menu__link:not(.footer__menu__link--social):after {
   content: " ";
@@ -97,11 +147,24 @@ footer {
   opacity: 0;
 }
 
+@media screen and (min-width: 990px) {
+  .footer__menu__link:not(.footer__menu__link--social):after {
+    bottom: .5rem;
+  }
+}
+
 
 .footer__menu__link--social {
   line-height: 1;
-  transition: all .2s ease;
+  font-style: italic;
 }
+
+@media screen and (min-width: 990px) {
+  .footer__menu__link--social {
+    margin-right: 1rem;
+  }
+}
+
 
 
 .footer__menu__link--social:after {
@@ -132,11 +195,24 @@ footer {
   fill: red;
 }
 
+@media screen and (min-width: 990px) {
+  .footer__menu__link-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
 .footer__menu__link-icon--youtube {
   height: 3rem;
   width: 2.5rem;
 }
 
+@media screen and (min-width: 990px) {
+  .footer__menu__link-icon--youtube {
+    height: 2rem;
+    width: 2rem;
+  }
+}
 
 .footer__we-got-you-container {
   width: 65%;
@@ -147,6 +223,20 @@ footer {
   margin-top: 3rem;
   margin-bottom: -1rem
 }
+
+@media screen and (min-width: 990px) {
+  .footer__we-got-you-container {
+    width: 100%;
+    position: relative;
+    max-width: 22rem;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 3rem;
+    margin-bottom: -3rem;
+    right: 1rem;
+  }
+}
+
 
 .footer__we-got-you {
   position: relative;
@@ -159,7 +249,32 @@ footer {
   left: 0;
   height: 100%;
   object-fit: cover;
+  transition: all 1s var(--easing-1);
 }
+
+.footer__we-got-you:hover svg {
+  animation: multi-colorizer 1s alternate infinite var(--easing-1);
+}
+
+@keyframes multi-colorizer {
+  0% {
+    fill: var(--quaternary-color);
+  }
+
+  30% {
+    fill: var(--tertiary-color)
+  }
+
+  60% {
+    fill: var(--quintenary-color)
+  }
+
+  100% {
+    fill: var(--quaternary-color)
+  }
+}
+
+
 
 .footer__credit {
   margin-bottom: 1.5rem;
@@ -170,4 +285,15 @@ footer {
   margin-right: auto;
   margin-left: auto;
   text-align: right;
+}
+
+@media screen and (min-width: 990px) {
+  .footer__credit {
+    margin-right: 0;
+    flex-grow: 1;
+    margin-bottom: .25rem;
+    max-width: 28rem;
+    display: flex;
+    flex-direction: column;
+  }
 }
