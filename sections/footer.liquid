@@ -5,34 +5,54 @@
 <footer class="footer"> 
   <div class="footer__inner">
 
-
     {% for block in section.blocks %}
         {%- case block.type -%}
         {%- when 'social_links'%}
-          <ul>
+          <ul class="footer__menu  footer__menu--social">
           {%- for link in block.settings.social_links.links -%}
-            <li>  
+            <li class="footer__menu__item">  
 
-              <a href="{{ link.url }}" title="Go to the Good Times on {{}}" rel="external">
-                {% if link.url contains 'instagram' %}
-                  IG
-                {%elsif link.url contains 'youtube'%}
-                    YT
-                {%elsif link.url contains 'twitter'%}
+            {% if link.url contains 'instagram' %}
+              {% assign account = 'Instagram' %}
+            {%elsif link.url contains 'youtube'%}
+               {% assign account = 'YouTube' %}
+            {%elsif link.url contains 'twitter'%}
+              {% assign account = 'Twitter' %}
+            {% endif %}
+
+
+              <a class="footer__menu__link   footer__menu__link--social" href="{{ link.url }}" title="Visit Good Times on {{ account }}" rel="external" target="_blank">
+                {% if account contains 'Instagram' %}
+                  <svg aria-hidden="true" focusable="false" role="presentation" class="footer__menu__link-icon">
+                    <use href="#icon-instagram">
+                  </svg>
+                {%elsif account contains 'YouTube'%}
+                    <svg aria-hidden="true" focusable="false" role="presentation"  class="footer__menu__link-icon footer__menu__link-icon--youtube">
+                      <use href="#icon-youtube">
+                    </svg>
+                {%elsif account contains 'Twitter'%}
                     TW
                 {% endif %}
-                {% unless link.url contains 'instagram' %}
-                  {{ link.title }}
+
+                {% unless link.url contains 'youtube' %}
+                  <span>{{ link.title }}</span> 
                 {%- endunless -%}
+
+                <span class="visually-hidden">
+                  {{ account }}
+                </span>
               </a>
             </li>
           {%- endfor -%}
          </ul>
+
         {%- when 'link_list'%}
-          <ul>
+          <ul class="footer__menu">
             {%- for link in block.settings.footer_menu.links -%}
-              <li>
-                {{ link.title }}
+              <li class="footer__menu__item">
+                <a class="footer__menu__link" href="{{ link.url }}" {%- if link.type == 'http_link' -%} rel="external"  target="_blank" {%else%} rel="internal" {% endif %}">
+                 <span> {{ link.title }}</span>
+                </a>
               </li>
             {%- endfor -%}
            </ul>
@@ -40,11 +60,18 @@
         
     {% endfor %}
 
-    <div>
-      <div>
-        We Got Your
+    <div class="footer__credit">
+      <div class="footer__we-got-you-container">
+        <div class="footer__we-got-you">
+          <svg aria-hidden="true" focusable="false" role="presentation">
+            <use href="#graphic-we-got-you">
+          </svg>
+        </div>
       </div>
-      {{ section.settings.copyright }}
+
+      <p class="footer__credit">
+        {{ section.settings.copyright }}
+      </p>
     </div>
   </div>
 
