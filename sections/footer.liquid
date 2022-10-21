@@ -1,11 +1,28 @@
 {% comment %}theme-check-disable UndefinedObject{% endcomment %}
 {{ 'section-footer.css' | asset_url | stylesheet_tag }}
 
-<footer class="footer"> 
 
+<footer class="footer"> 
   <div class="footer__inner">
 
-      footer
+
+    {% for block in section.blocks %}
+        {%- case block.type -%}
+
+        {%- when 'social_links'%}
+          Social Links
+        {%- when 'link_list'%}
+          Menu Links
+        {%- endcase %}
+        
+    {% endfor %}
+
+    <div>
+      <div>
+        We Got Your
+      </div>
+      {{ section.settings.copyright }}
+    </div>
   </div>
 
 </footer> 
@@ -96,8 +113,7 @@
         {
           "type": "link_list",
           "id": "social_links",
-          "label": "t:sections.footer.blocks.link_list.settings.menu.label",
-          "info": "t:sections.footer.blocks.link_list.settings.menu.info"
+          "label": "Social Links Menu"
         }
       ]
     }
