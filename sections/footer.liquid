@@ -8,11 +8,34 @@
 
     {% for block in section.blocks %}
         {%- case block.type -%}
-
         {%- when 'social_links'%}
-          Social Links
+          <ul>
+          {%- for link in block.settings.social_links.links -%}
+            <li>  
+
+              <a href="{{ link.url }}" title="Go to the Good Times on {{}}" rel="external">
+                {% if link.url contains 'instagram' %}
+                  IG
+                {%elsif link.url contains 'youtube'%}
+                    YT
+                {%elsif link.url contains 'twitter'%}
+                    TW
+                {% endif %}
+                {% unless link.url contains 'instagram' %}
+                  {{ link.title }}
+                {%- endunless -%}
+              </a>
+            </li>
+          {%- endfor -%}
+         </ul>
         {%- when 'link_list'%}
-          Menu Links
+          <ul>
+            {%- for link in block.settings.footer_menu.links -%}
+              <li>
+                {{ link.title }}
+              </li>
+            {%- endfor -%}
+           </ul>
         {%- endcase %}
         
     {% endfor %}
