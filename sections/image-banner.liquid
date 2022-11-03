@@ -66,12 +66,13 @@
 
 {% endstyle %}
 
-{% comment %} 
+
 <div class="character">
   <img src="{{ section.settings.character | image_url: width: 750 }}" width="{{ section.settings.character.width }}" alt="Hello from Good Times!" loading="lazy">
-</div> {% endcomment %}
-{% comment %} <div class="section-marquee" style="background-color: var(--tertiary-color); position: absolute; width: 100%; bottom: 0; left: 0; z-index: 2;" aria-hidden="true" role="presentation">
-  <div class="section-marquee__scroll-container">
+</div> 
+
+<div class="section-marquee " style="background-color: var(--tertiary-color); position: absolute; width: 100%; bottom: 0; left: 0; z-index: 2;" aria-hidden="true" role="presentation">
+  <div class="section-marquee__scroll-container is-reversed">
     <span>
       <span class="icon">☻</span> We Got You
     </span>
@@ -126,8 +127,8 @@
     <span>
       <span class="icon">☻</span> We Got You
     </span>
-</div> {% endcomment %}
-{% comment %} </div> {% endcomment %}
+</div> 
+ </div> 
 <div class="image-banner__inner">
   <picture>
       <source media="(min-width: 700px)" srcset="{%- if section.settings.desktop_image.width >= 375 -%}{{ section.settings.desktop_image | image_url: width: 375 }} 375w,{%- endif -%}

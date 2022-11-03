@@ -16,7 +16,12 @@
     position: relative;
     will-change: transform;
     transform: translateZ(0);
-    animation: marquee-scroll 100s linear infinite;
+    animation: marquee-scroll 200s linear infinite;
+}
+
+
+.section-marquee__scroll-container.is-reversed {
+    animation: marquee-scroll 200s linear infinite reverse;
 }
 
 
