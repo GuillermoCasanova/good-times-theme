@@ -10,6 +10,7 @@
     --quintenary-color: #6c0061;
     --septinary-color: #eeda25;
     --background-color: rgb(255 251 235);
+    --background-color-lighter: #f5f3eb;
     --easing-1: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -25,7 +26,7 @@ main {
 
 body {
     /* background-color: rgb(241, 237, 225) !important; */
-    background-color: var(--background-color) !important
+    background-color: var(--background-color-lighter) !important;
 }
 
 .site-wrapper {
