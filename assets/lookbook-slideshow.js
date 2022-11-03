@@ -1,5 +1,5 @@
 
-import Swiper from './swiper.module.js'
+let Swiper = null; 
 
 class LookbookSlideshow extends HTMLElement {
     constructor() {
@@ -20,9 +20,13 @@ class LookbookSlideshow extends HTMLElement {
     }
   
     init() {
-        this.mediaQueries.largeUp.addEventListener("change", this.startSlideshow.bind(this)); 
-        this.startSlideshow(this.mediaQueries.largeUp); 
-        this.initDragCursor();
+        import('./swiper.module.js').then((pSwiper) => {
+            console.log(pSwiper); 
+                Swiper = pSwiper;
+                this.mediaQueries.largeUp.addEventListener("change", this.startSlideshow.bind(this)); 
+                this.startSlideshow(this.mediaQueries.largeUp); 
+                this.initDragCursor();
+            }); 
     } 
 
 
@@ -83,7 +87,7 @@ class LookbookSlideshow extends HTMLElement {
             this.destroy('slideshow'); 
         }
         
-        const slideshowElem = document.querySelector(this.selectors.slideshow); 
+        const slideshowElem = this.querySelector(this.selectors.slideshow); 
         const that = this; 
         slideshowElem.classList.add('swiper'); 
         slideshowElem.querySelector(this.selectors.slideshowWrapper).classList.add('swiper-wrapper');
@@ -91,7 +95,8 @@ class LookbookSlideshow extends HTMLElement {
             element.classList.add('swiper-slide');
         });
 
-        this.slideshow = new Swiper(this.querySelector(this.selectors.slideshow), slideshowProps);
+        this.slideshow = new Swiper.default(this.querySelector(this.selectors.slideshow), slideshowProps);
+        console.log(this.slideshow); 
     }
 
     destroy(pToDestroy) {

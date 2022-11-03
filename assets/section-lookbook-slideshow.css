@@ -5,6 +5,7 @@
 
 .lookbook-slideshow-container {
     position: relative;
+    overflow: hidden;
 }
 
 .lookbook-slideshow-container__inner {

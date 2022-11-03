@@ -1,7 +1,6 @@
 {{ 'vendor-swiper.css' | asset_url | stylesheet_tag }}
 {{ 'section-lookbook-slideshow.css' | asset_url | stylesheet_tag }}
 
-<script type="module" src="{{ 'lookbook-slideshow.js' | asset_url }}" defer="defer"></script>
 
 
 <div class="lookbook-slideshow-container__inner">
@@ -48,6 +47,9 @@
     </div>
   </lookbook-slideshow>
 </div>
+
+<script type="module" src="{{ 'lookbook-slideshow.js' | asset_url }}" ></script>
+
 
 {% schema %}
 {
