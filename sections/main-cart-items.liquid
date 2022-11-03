@@ -5,19 +5,7 @@
 {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 
-{%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
 
-  @media screen and (min-width: 700px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-{%- endstyle -%}
 
 {%- unless settings.cart_type == 'drawer' -%}
   <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
@@ -30,10 +18,26 @@
   </div>
 
   <div class="cart__warnings">
-    <h1 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h1>
-    <a href="{{ routes.all_products_collection_url }}" class="button">
-      {{ 'general.continue_shopping' | t }}
-    </a>
+    
+      <div class="cart__empty-warning"> 
+
+       <div class="cart__empty-warning_character-container">
+          <div class="cart__empty-warning_character">
+                <svg aria-hidden="true" focusable="false" role="presentation">
+                  <use href="#character-empty-cart">
+                </svg>
+          </div>
+        </div>
+
+         <h1 class="cart__empty-warning_headline">{{ 'sections.cart.empty' | t }}</h1>
+          <div class="cart__empty-warning_body">
+            <p>
+              There’s nothing in your bag, yet.
+             </p>
+         </div>
+
+    </div>
+
 
     {%- if shop.customer_accounts_enabled and customer == nil -%}
       <h2 class="cart__login-title">{{ 'sections.cart.login.title' | t }}</h2>
