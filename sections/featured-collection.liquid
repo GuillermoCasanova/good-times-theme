@@ -129,24 +129,26 @@
             {%- endif -%}
           </div>
 
-          <div class="collection__description">
-            {% if section.settings.collection != blank %}
-            <div>
-              {{ section.settings.collection.description }}
+          <div>
+            <div class="collection__description">
+              {% if section.settings.collection != blank %}
+              <div>
+                {{ section.settings.collection.description }}
+              </div>
+              {% endif %}
             </div>
-            {% endif %}
+                  
+            {%- if section.settings.show_view_all and true -%}
+              <div class="collection__view-all">
+                <a href="{{ section.settings.collection.url }}"
+                  class="button  button--primary  button--small"
+                  aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title }}"
+                >
+                  {{ 'sections.featured_collection.view_all' | t }} {{ section.settings.title }}
+                </a>
+              </div>
+            {%- endif -%}
           </div>
-                
-          {%- if section.settings.show_view_all and true -%}
-            <div class="collection__view-all">
-              <a href="{{ section.settings.collection.url }}"
-                class="button  button--primary  button--small"
-                aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title }}"
-              >
-                {{ 'sections.featured_collection.view_all' | t }} {{ section.settings.title }}
-              </a>
-            </div>
-          {%- endif -%}
         </div>
       </div>
     </div>

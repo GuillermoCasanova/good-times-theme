@@ -225,7 +225,7 @@ html.no-js .no-js-hidden {
 
 @media screen and (min-width: 700px) {
   .page-width {
-    padding: 0 3rem;
+    padding: 0 2rem;
   }
 
   .page-width--narrow {
@@ -2242,9 +2242,12 @@ input[type='checkbox'] {
 .header {
   display: grid;
   grid-template-areas: 'left-icon heading icons';
-  grid-template-columns: 1.5fr 2fr 1fr;
-  align-items: center;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: flex-start;
   padding: 0 1.5rem;
+  padding-top: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   max-width: 160rem;
   margin-right: auto;
   margin-left: auto;
@@ -2267,7 +2270,9 @@ input[type='checkbox'] {
 .header__heading {
   margin: 0;
   line-height: 0;
-  width: 10rem;
+  width: 100%;
+  max-width: 9rem;
+  ;
   top: 0;
   transition: all var(--duration-default) ease;
 }
@@ -2277,6 +2282,7 @@ input[type='checkbox'] {
   width: 100%;
   position: relative;
   padding-bottom: 100%;
+  top: -1rem;
 }
 
 
@@ -2284,7 +2290,8 @@ input[type='checkbox'] {
   display: flex;
   align-items: center;
   width: 12rem;
-  margin-top: 1rem;
+  margin-top: 1.75rem;
+  max-width: 100%;
   transform: scale(1) !important;
 }
 
@@ -2622,7 +2629,8 @@ details[open]>.header__submenu {
 }
 
 .header.is-hovered:not(.is-subpage) .header__heading {
-  width: 6rem;
+  transform: scale(.96);
+  transform-origin: top;
 }
 
 
