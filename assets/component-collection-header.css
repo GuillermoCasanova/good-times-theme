@@ -65,7 +65,8 @@
 }
 
 .collection-header__title {
-  margin: 2.5rem 0;
+  margin-top: 2rem;
+  margin-bottom: .25rem;
   color: var(--primary-color);
   text-shadow: var(--headline-shadow);
   text-transform: uppercase;

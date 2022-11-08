@@ -176,6 +176,12 @@
   margin-bottom: 0.5rem;
 }
 
+@media screen and (min-width: 990px) {
+  .facets__form {
+    margin-top: -4.5rem;
+  }
+}
+
 .facets__wrapper {
   align-items: center;
   align-self: flex-start;
